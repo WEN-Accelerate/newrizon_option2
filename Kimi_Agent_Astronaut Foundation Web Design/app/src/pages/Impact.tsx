@@ -1,0 +1,98 @@
+import { assets, fiveYearTargets, impactStories } from '@/data/content';
+import { CounterStat, GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
+import { PageEndBand } from '@/components/Layout';
+import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
+
+export default function Impact() {
+  const scope = useReveal<HTMLDivElement>();
+  useParallax();
+  usePageIntro();
+
+  return (
+    <main ref={scope} className="relative z-10">
+      <PageHero
+        eyebrow="Impact"
+        title={
+          <>
+            Learning that <span className="text-gradient-orbit">changes things.</span>
+          </>
+        }
+        sub="Every number here is a student who thought differently, a community that changed, a border that dissolved a little."
+        image={assets.earthDay}
+        tone="day"
+      >
+        <PrimaryLink to="/get-involved">Fund a classroom</PrimaryLink>
+        <GhostLink to="/gallery">See field notes</GhostLink>
+      </PageHero>
+
+      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+        <SectionHeading
+          eyebrow="Five-Year Targets"
+          title="The Scale We're Building"
+          sub="These are targets, not results. They are published so we can be measured against them."
+          align="center"
+        />
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {fiveYearTargets.map((stat) => (
+            <CounterStat key={stat.label} {...stat} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 lg:px-10">
+        <SectionHeading
+          eyebrow="Stories of Change"
+          title="Impact from the Field"
+          sub="Six projects. Six places. Each one already finished, and each one documented."
+        />
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          {impactStories.map((story, index) => (
+            <article key={story.headline} className="group overflow-hidden rounded-[2rem] border hairline bg-white/[0.035]" data-reveal>
+              <ImageSlotCard
+                slot={{
+                  id: story.image,
+                  spec: 'Foundation archive story image placeholder; guardian consent required before publication.',
+                  alt: story.headline,
+                  status: 'TO SOURCE',
+                  src: assets.classroom,
+                }}
+                ratio="aspect-[4/3]"
+                className="rounded-none border-0"
+              />
+              <div className="p-7">
+                <Tag>{story.tag}</Tag>
+                <h3 className="mt-5 font-display text-3xl font-semibold leading-tight tracking-[-0.04em] text-[#fffdf5]">
+                  {story.headline}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-[#c8d4ea]/[0.72]">{story.body}</p>
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t hairline pt-5">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-sky-100/[0.68]">{story.credit}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-100/70">Evidence: [required]</p>
+                </div>
+                <p className="sr-only">Story {index + 1}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1100px] px-5 py-24 sm:px-8 lg:px-10">
+        <SectionHeading eyebrow="How we measure" title="Plain rules. Public evidence." align="center" />
+        <div className="mt-12 space-y-8 text-center">
+          {[
+            'Every Earthizen project produces an artefact — a device, a document, a resolution, a dataset. We publish what worked and what did not.',
+            'Every school partnership is reviewed at the end of each term against outcomes agreed at the start.',
+            'Every funder receives quarterly briefings and an annual audited impact report.',
+            'Where a claim cannot be evidenced, we do not make it.',
+          ].map((line) => (
+            <p key={line} className="mx-auto max-w-4xl font-serif-display text-2xl leading-snug text-[#fffdf5] sm:text-3xl" data-reveal>
+              {line}
+            </p>
+          ))}
+        </div>
+      </section>
+
+      <PageEndBand />
+    </main>
+  );
+}

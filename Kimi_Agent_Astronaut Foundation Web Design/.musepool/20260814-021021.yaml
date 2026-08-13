@@ -1,0 +1,219 @@
+items:
+- short_id: tSzeMd3l
+  seed: |
+    # Narrative
+
+    A design conference landing page for a major design tool company's annual event. The narrative flows from an explosive, playful hero with animated color blocks and experimental typography, through speaker showcases with distinctive halftone portraits, to practical event information and sponsor recognition. The tone is energetic, creative, and community-focused — aimed at designers and product builders.
+
+    # Tech Stack
+
+    Next.js with React, styled via CSS-in-JS (Emotion). Uses Rive for interactive vector animations (`.riv` files). Custom variable font "Figma Sans" and "Figma Mono" loaded via `@font-face`. CSS custom properties for theming via RGB values.
+
+    # Layout
+
+    Full-bleed dark canvas with asymmetric content blocks. Hero features a massive experimental logotype spanning the width, with four bold color panels (orange, yellow, green, blue) arranged in a staggered grid below. Content sections alternate between centered editorial text and left-aligned practical information. Speaker grid uses a 4-column layout with generous gutters. Footer returns to the four-color motif as a visual bookend.
+
+    # Typography
+
+    **Primary: Figma Sans** — a custom variable font with distinctive character shapes (the "C" has a cloud-like counter, the "g" uses a spiral form). Used for the hero logotype and headings at massive sizes (appears to be 15-20vw for the hero). Light weight (300) throughout.
+
+    **Monospace: Figma Mono** — same family, monospace variant for labels and metadata ("FEATURED SPEAKERS", "WHY ATTEND").
+
+    Body text uses the same Figma Sans at smaller sizes with comfortable line-height. All-caps treatment for section labels with small square bullet prefix.
+
+    # Color
+
+    Dark-first palette: background is near-black `#000000` or very dark gray. Text is off-white `#ffffff` or light gray.
+
+    Accent panels use saturated, flat colors:
+    - Orange: `#FF6B35` (vibrant coral-orange)
+    - Yellow: `#F7E84C` (bright lemon)
+    - Green: `#00C853` (vivid emerald)
+    - Blue: `#2979FF` (electric blue)
+
+    Grayscale speaker portraits with halftone dithering effect. Sponsor logos in white/light gray on dark.
+
+    # Imagery
+
+    Speaker portraits are black-and-white with a distinctive **stippled/halftone dithering** effect — not smooth gradients but visible dot patterns creating tonal variation. Full-bleed photography in the "community gallery" section shows candid event moments with natural lighting. Abstract geometric shapes and animated vector graphics (Rive) provide motion and visual interest in the hero.
+
+    # Components
+
+    **Buttons:** Pill-shaped (fully rounded) or rectangular with sharp corners. Two variants — filled light on dark, and outline style. "REGISTER" and "VIEW AGENDA" CTAs are full-width on mobile, auto-width on desktop.
+
+    **Cards:** Speaker cards are image-first with minimal text below — name and title only, no descriptions.
+
+    **Navigation:** Fixed header with minimal items (AGENDA, SPEAKERS, FAQ) and a REGISTER pill button.
+
+    **Cookie Consent:** Modal dialog with clear hierarchy — settings link, primary action (ALLOW ALL), secondary action (DO NOT ALLOW).
+
+    # Motion
+
+    Rive-powered interactive animations in the hero — the color blocks and shapes respond to interaction. Smooth scroll behavior. The hero typography may have variable font axis animation. Loading states and transitions use standard React/Next.js patterns. Speaker carousel with previous/next controls.
+
+    # Algorithms
+
+    Standard implementation, no special design.
+
+    # Material
+
+    Standard implementation, no special design.
+
+    # Craft
+
+    - Custom variable font with unique glyph designs (cloud C, spiral g)
+    - Halftone dithering effect on all speaker photography
+    - Square bullet prefix (■) for section labels
+    - Consistent light weight (300) across all typography
+    - Cookie consent modal with clear visual hierarchy
+- short_id: oubErnNt
+  seed: |
+    # Narrative
+
+    A personal brand site for a scientist and thought leader in longevity intelligence. The narrative opens with a dramatic hero featuring a classical sculptural bust with glowing neural pathways, establishing the theme of human-meets-technology. The story flows through an "Explore" section with floating cards, a visionary principles section with interactive hover states, and concludes with a contact form. The overall intent is to position the subject as a bridge between ancient wisdom and future technology.
+
+    # Tech Stack
+
+    Tailwind CSS for styling, GSAP for animations, Lenis for smooth scrolling, Swup for page transitions. Custom font loading via @font-face with Taviraj (serif) and Work Sans (sans-serif). Lazy loading via vanilla-lazyload.
+
+    # Layout
+
+    Full-bleed dark hero with centered sculptural image. Split-screen name treatment with first name left and last name right of the central image. Navigation floats fixed at top with glassmorphism blur. Content sections use generous vertical padding (py-100, py-80) with container max-width constraints. The visionary section uses an asymmetric grid with absolute-positioned book image.
+
+    # Typography
+
+    Dual font system: Taviraj (serif) for display and editorial text, Work Sans for UI and body. Hero names are massive uppercase serif (tracking-highest). Italic serif used for taglines and quotes. Font sizes range from text-sm (1.4rem) to massive display (5.8rem+). Tracking varies from tight (-0.04em) to highest (0.04em).
+
+    # Color
+
+    Deep space purple background (#0a0521, #050a21) with warm cream text (#e6e6e1, #f1e9dd). Accent purple (#8642ff, #9a92d9) for interactive states. Secondary purple (#362669) for depth. Blue accent (#160f39) for gradients. The palette creates a cosmic, premium atmosphere.
+
+    # Imagery
+
+    Central hero image is a 3D-rendered classical marble bust with glowing golden neural pathways wrapping around the neck and shoulders—symbolizing the fusion of ancient wisdom and modern technology. Book image features flowing illuminated pages. All imagery uses transparent PNGs against the dark background, creating a floating, ethereal quality.
+
+    # Components
+
+    Primary button is pill-shaped with border (#9a92d9) and transparent background, hover fills with accent. Form inputs are minimal with bottom borders only. Navigation links use uppercase tracking with hover color transitions. Cards in explore section have rounded corners with gradient overlays.
+
+    # Motion
+
+    Page load sequence: hero image fades in with blur removal, name text splits and animates line-by-line with blur-to-sharp transition. Scroll-triggered animations using data-animation attributes with GSAP. Smooth scroll via Lenis. Hover states on visionary items trigger color transitions and content reveals. Lightning animation effect in background of explore section.
+
+    # Algorithms
+
+    Standard implementation, no special design.
+
+    # Material
+
+    Glassmorphism on navigation with backdrop-blur-md. Soft shadows (shadow-book-purple) on floating elements. Subtle noise texture implied in gradients. Glow effects via radial gradients (#9262E8 to transparent).
+
+    # Craft
+
+    Custom cursor tracking via CSS variables (--cursor-x, --cursor-y). Rounded story circles with animated light beams. SVG path lines connect visionary items on mobile. Form validation with inline error states. Responsive breakpoints at md (768px), lg (1024px), laptop (1280px), 2xl (1440px), 3xl (1920px).
+
+    # Coherence
+
+    The cosmic purple palette, classical sculptural imagery, and glowing neural pathways work together to express the core theme: longevity intelligence as the intersection of timeless human wisdom and cutting-edge technology. The typography reinforces this with classical serif for gravitas and modern sans-serif for accessibility.
+- short_id: ut4uHgqs
+  seed: |
+    # Narrative
+
+    An AI orchestration platform landing page for service companies. The narrative opens with a cinematic hero featuring a 3D glass stack visualization, transitions through capabilities cards with glowing accents, then reveals a full-stack architecture via an interactive 3D layered stack. The story closes with articles and resources. The tone is technical-sovereign: secure, enterprise-ready, yet visually daring.
+
+    # Tech Stack
+
+    React + TypeScript + Vite + Tailwind CSS. Three.js (drei/react-three-fiber) for the 3D stack visualization. Framer Motion for scroll-driven animations. Lucide icons. Google Fonts: Inter Tight and JetBrains Mono.
+
+    # Layout
+
+    Centered hero with massive rounded container (24px radius) housing the 3D scene. Fixed navbar with centered wordmark. Full-bleed dark sections alternate with warm cream background. The 3D stack section uses a sticky scroll approach where layers reveal progressively. Cards use a consistent 22px border radius. Generous padding (84px on desktop) creates breathing room around the 3D elements.
+
+    # Typography
+
+    Primary: Inter Tight (300-700 weights) — geometric sans with tight tracking (-0.02em on headlines). Mono: JetBrains Mono for labels and technical text. Hero headline uses italic styling for the second line ("Built for Service Companies"). Uppercase mono labels with wide letter-spacing (0.34em) for stack layer identifiers.
+
+    # Color
+
+    Warm cream page background `#F4F0EA` with dark text `#0A0A0C`. Dark sections use deep charcoal `#0d0d11` to `#222228` gradient. Accent colors per stack layer: magenta `#D63E96`, orange `#F5A623`, cyan `#00D9FF`, purple `#9B59B6`. Card surfaces use subtle radial glows from accent colors at 18% opacity. Text on dark: `#F4F0EA` at 82% opacity for secondary, full for primary.
+
+    # Imagery
+
+    Central 3D glass/crystal object rendered in WebGL — translucent, refractive, rotating. Stack layers render as HTML portals projected onto 3D faces, showing feature cards with icons. Background starfield animation with twinkling white dots of varying sizes (1px to 2.25px) at randomized positions. Partner logos in grayscale row.
+
+    # Components
+
+    Glass input field: dark translucent surface `#1A1A1F` with subtle border, rounded 12px, animated placeholder text with caret. Pills below input: small rounded buttons with icons and labels ("Run an AI Task", "Create an AI App"). Stack layer cards: dark gradient background, 22px radius, glowing top-edge gradient from accent color, icon in rounded square container.
+
+    # Motion
+
+    Starfield: infinite twinkle animation with randomized duration (2.4s to 7.6s), opacity range (0.05 to 0.94), and scale pulse. 3D stack: scroll-driven rotation and layer reveal — layers fade in with opacity tied to scroll progress. Hero glass object: slow ambient rotation. Page load: staggered entrance for pills and input elements. See references/motion.md for scroll-driven stack animation details.
+
+    # Algorithms
+
+    Starfield generation: random position distribution across viewport, randomized animation duration and delay per star, opacity min/max variance creates depth. 3D stack layer visibility calculated from scroll progress: `Math.max((scroll - 0.15) / 0.85, 0)` normalized to layer index.
+
+    # Material
+
+    Glass morphism on input and cards: semi-transparent dark surfaces with backdrop blur. Card surfaces use `linear-gradient(158deg, #222228 0%, #0d0d11 100%)` with `1px solid #2c2c33` border. Layered shadows: `0 12px 34px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4)`. Glowing accents via `box-shadow` with accent color at 30-50% opacity.
+
+    # Craft
+
+    Custom cursor treatment on 3D scene. Shimmer button effect on CTA. Focus states preserved for accessibility. Rounded corners consistently applied (12px for inputs, 22px for cards, 24px for hero container). Mono font for technical hierarchy, sans for readable body.
+
+    # Coherence
+
+    The warm cream / deep charcoal duality creates a premium-sovereign atmosphere distinct from generic blue SaaS. The 3D glass stack serves as both visual centerpiece and functional navigation through capabilities. Consistent accent color mapping (magenta for Experience, orange for Operations, etc.) creates intuitive wayfinding through the stack layers.
+  references:
+        motion: "# Motion Reference\n\n## Scroll-Driven 3D Stack Animation\n\nThe 3D stack uses a scroll-progress-driven reveal system where layers become visible as the user scrolls.\n\n### Scroll Progress Calculation\n\n```javascript\n// From StackSection-nWGN_WbG.js\nconst scrollProgress = Math.max((scrollPosition - 0.15) / 0.85, 0);\nconst activeLayer = Math.min(\n  Math.floor(scrollProgress * (totalLayers - 1) + 0.5), \n  totalLayers - 1\n);\n```\n\n- First 15% of scroll: no layer visible (buffer zone)\n- 15% to 100%: normalized progress drives layer index\n- Rounding with 0.5 offset creates snap-to-layer behavior\n\n### Layer Reveal Timing\n\n```javascript\n// Auto-advance timing for initial load animation\nconst delay = currentLayer === 0 ? 450 : 380; // ms between layers\n```\n\n### CSS Custom Property Binding\n\n```css\n.stack-face-overlay {\n  opacity: var(--reveal, 0);\n  transform-origin: center center;\n  will-change: transform;\n}\n```\n\nThe `--reveal` property is set inline via JavaScript based on scroll position, ranging from 0 to 1.\n\n### Starfield Animation\n\n```css\n@keyframes starfield-twinkle {\n  0%, 100% { opacity: var(--o-min); transform: scale(1); }\n  50% { opacity: var(--o-max); transform: scale(1.25); }\n}\n```\n\nInline styles per star:\n- `--o-min`: 0.05 to 0.26 (base opacity)\n- `--o-max`: 0.13 to 0.94 (peak opacity)\n- Animation duration: 2.4s to 7.6s (randomized)\n- Animation delay: negative offset for staggered start\n- Star sizes: 1px, 
+      1.5px, or\
+      \ 2.25px with optional glow shadow\n\n### Reusable Move\n\n`scroll_progress_layer_reveal` — Map scroll position to discrete layer visibility with snap rounding and CSS custom property updates.\n"
+- short_id: en0ZOCNr
+  seed: |
+    # Narrative
+
+    An environmental advocacy campaign landing page demanding industry reform. The narrative flows from an urgent hero statement through visual storytelling of wilderness habitats, to a petition signup with progress tracking, and ends with a typographic manifesto footer. The page builds emotional connection through nature photography before converting visitors to sign the petition.
+
+    # Tech Stack
+
+    Framer (visual site builder) with React-based component system. Custom signature form embedded via iframe using waitlist API for petition tracking. CSS custom properties for theming. SVG-based text rendering for the massive headline.
+
+    # Layout
+
+    Full-bleed single column with dramatic vertical rhythm. Hero section centers massive uppercase headline with tight letter-spacing (0.03em). Below, nature photography of rivers and wildlife floats in asymmetric composition against deep teal backgrounds. The petition form appears as a contained white card (max-width 428px, 20px radius) with progress bar. Footer repeats headline at enormous scale as graphic element. Generous negative space throughout.
+
+    # Typography
+
+    Three-font system: **KK-Topo Regular** for massive display headlines (uppercase, tight tracking), **GT Walsheim Regular** for body and UI text, **GT Pressura Mono Regular** for data/labels. Headline at ~200px creates dominant visual anchor. Body set in warm off-white (#fffdf5) against deep teal for high contrast readability.
+
+    # Color
+
+    Environmental teal palette: deep forest `#032625` (darkest), `#0e4140`, `#165451` (primary action), `#2a827e` (mid-tone), light aqua `#adefed`, cyan highlight `#d3fffe`, warm paper `#fffdf5` (background), pure white `#fff` for cards. Gradient transitions between teal depths create atmospheric depth suggesting aquatic habitat.
+
+    # Imagery
+
+    Full-bleed nature photography of rivers and fishing scenes. Four key images: rushing turquoise river with wooden bridge, fly-fisher on riverbank, waterfall with traditional building, close-up of fish in water. Images have natural color grading emphasizing aqua/teal tones that harmonize with site palette. Photography supports the narrative of pristine wilderness at risk.
+
+    # Components
+
+    Petition signup card with animated progress bar (14px height, 5px radius, `#adefed` fill), dual input fields for names (20px radius, `#f5f5f5` background), email field, custom checkbox with teal checked state and white dot indicator. Primary CTA button: full-width, 30px vertical padding, `#165451` background, `#d3fffe` text, hover transitions to `#adefed` with dark text. Success message overlay with backdrop blur.
+
+    # Motion
+
+    Scroll-triggered entrance animations: elements fade in while translating up from 12px offset. Progress bar animates width with 0.5s ease-in-out. Counter increments with 50ms interval animation. Button hover states transition all properties 0.3s ease. Form submission triggers blur backdrop overlay fade. Reduced-motion conscious with CSS custom properties for will-change optimization.
+
+    # Algorithms
+
+    Standard implementation, no special design.
+
+    # Material
+
+    Standard implementation, no special design.
+
+    # Craft
+
+    Custom checkbox with rounded square (5px radius) and centered dot indicator on check. Form input focus states with border-color transition. Disabled button state at 0.75 opacity with pointer-events none until consent checkbox activates. Progress bar with overflow hidden container and animated inner fill.
+
+<system-reminder>
+The risk is not borrowing too little — it is subconsciously simplifying what you borrowed. Cutting corners is forbidden in any form: never replace a reference's technique, material, structure, or motion with a cheaper version of your own. Downgrades follow repeatable patterns (illustrative, not exhaustive): input-driven motion (scroll/pointer/time) → one-shot keyframes or static states; shape-language transformation (morph/clip/mask) → the cheapest properties (scale/translate/opacity); asymmetric layout rhythm (irregular grids, editorial composition) → uniform columns and full-width stacks; layered material (blend/texture/depth) → flat single-layer fills; bespoke vessels (framing devices, illustrated components) → default cards and pills; choreographed sequences (staged, multi-step, gated) → single triggers or fakes; typographic systems (pairing/scale/font features) → swapping the font-family; styled components → library-default skins. If your version is simpler than the reference's, that is a downgrade. Implement at the reference's fidelity.
+</system-reminder>
