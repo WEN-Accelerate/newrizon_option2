@@ -37,6 +37,30 @@ export const assets = {
   spacecraft: '/images/spacecraft-capsule.png',
 };
 
+/**
+ * Real Earthizen Foundation photography, migrated from the newrizon repository
+ * and the approved design PDFs. Founder: Group Captain Shubhanshu Shukla.
+ */
+export const photos = {
+  founderPortrait: '/images/photos/founder-portrait.jpg',
+  schoolVisit: '/images/photos/school-visit.jpg',
+  studentsGroup: '/images/photos/students-group.jpg',
+  eventUnveiling: '/images/photos/event-unveiling.jpg',
+  communityWalk: '/images/photos/community-walk.jpg',
+  leadersMeeting: '/images/photos/leaders-meeting.jpg',
+  pressInteraction: '/images/photos/press-interaction.jpg',
+  podiumAddress: '/images/photos/podium-address.jpg',
+  orbitEarth: '/images/photos/orbit-earth.jpg',
+  classroomChildren: '/images/photos/classroom-children.jpg',
+  studentInnovation: '/images/photos/student-innovation.jpg',
+  welcomeCeremony: '/images/photos/welcome-ceremony.jpg',
+  sharingSpacePhotos: '/images/photos/sharing-space-photos.jpg',
+  felicitation: '/images/photos/felicitation.jpg',
+  earthNight: '/images/photos/earth-night.jpg',
+  earthNightCityLights: '/images/photos/earth-night-city-lights.jpg',
+  orbitalSunriseArrays: '/images/photos/orbital-sunrise-arrays.jpg',
+};
+
 export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Programmes', to: '/programmes' },
@@ -106,9 +130,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-02',
       spec: 'Classroom exchange in progress: partner school on a projected screen, local students turned toward it, someone mid-sentence.',
-      alt: 'An Indian classroom in a live exchange session with a partner school overseas',
-      status: 'TO COMMISSION',
-      src: assets.classroom,
+      alt: 'Group Captain Shubhanshu Shukla with students at a school outreach visit',
+      status: 'AVAILABLE',
+      src: photos.schoolVisit,
     },
   },
   {
@@ -136,9 +160,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-03',
       spec: 'School makerspace mid-session: 3D printer running, components on the bench, students working on the same build.',
-      alt: 'Students working together on a prototype in a school makerspace',
-      status: 'TO COMMISSION',
-      src: assets.classroom,
+      alt: 'Group Captain Shubhanshu Shukla unveiling a space-careers programme with students and educators',
+      status: 'AVAILABLE',
+      src: photos.eventUnveiling,
     },
   },
   {
@@ -166,9 +190,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-04',
       spec: 'Students out in their own neighbourhood doing fieldwork — notebooks or phones in hand, street-level, unposed.',
-      alt: 'School students carrying out a community survey in their neighbourhood',
-      status: 'TO COMMISSION',
-      src: assets.classroom,
+      alt: 'Group Captain Shubhanshu Shukla walking through a village with community members',
+      status: 'AVAILABLE',
+      src: photos.communityWalk,
     },
   },
   {
@@ -196,9 +220,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-05',
       spec: 'A student at a telescope eyepiece at dusk, or a group reading satellite imagery of their own district on a screen.',
-      alt: 'A student observing through a telescope at an after-school astronomy club',
-      status: 'TO COMMISSION',
-      src: assets.classroom,
+      alt: 'Students and teachers with Group Captain Shubhanshu Shukla in a school courtyard',
+      status: 'AVAILABLE',
+      src: photos.studentsGroup,
     },
   },
 ];
@@ -282,6 +306,8 @@ export const impactStories = [
     body: 'AI, coding and data-literacy bootcamps for underserved youth: six-week intensive programmes with certified learning pathways and mentorship.',
     credit: 'Dharavi, Mumbai · 2024',
     image: 'IMG-I-02',
+    photo: photos.classroomChildren,
+    photoAlt: 'Group Captain Shubhanshu Shukla with young students in their classroom',
   },
   {
     tag: 'BRIDGE · Civic Budget Watch',
@@ -289,6 +315,8 @@ export const impactStories = [
     body: 'Students in Delhi identified significant underspending in their ward’s school repair budget, compiled a documented case, and presented it at a ward committee meeting.',
     credit: 'Delhi · 2024',
     image: 'IMG-I-03',
+    photo: photos.leadersMeeting,
+    photoAlt: 'Group Captain Shubhanshu Shukla in conversation with community and institutional leaders',
   },
   {
     tag: 'ORBIT · Global Assembly',
@@ -296,6 +324,8 @@ export const impactStories = [
     body: 'Sixteen schools from India, Kenya, Brazil and Germany debated “Should space be governed by a world body?” Their co-authored Youth Space Resolution was formally submitted to the United Nations.',
     credit: 'Virtual · 2024 pilot',
     image: 'IMG-I-04',
+    photo: photos.studentsGroup,
+    photoAlt: 'Students and teachers gathered with Group Captain Shubhanshu Shukla in a school courtyard',
   },
   {
     tag: 'NEXUS · Maker Bharat',
@@ -303,6 +333,8 @@ export const impactStories = [
     body: 'Class 7 students in Rajkot 3D-printed a low-cost water-quality sensor, deployed it in their local borewell, and set it to alert parents by SMS.',
     credit: 'Rajkot, Gujarat · 2024',
     image: 'IMG-I-05',
+    photo: photos.studentInnovation,
+    photoAlt: 'A school student demonstrating a wearable device prototype at an innovation showcase',
   },
   {
     tag: 'COSMOS · Future Earth Explorers',
@@ -310,6 +342,8 @@ export const impactStories = [
     body: 'An after-school club at KV No. 1, Bengaluru built a model Mars habitat from locally sourced materials, winning a national competition judged by ISRO engineers.',
     credit: 'Bengaluru, Karnataka · 2024',
     image: 'IMG-I-06',
+    photo: photos.podiumAddress,
+    photoAlt: 'Group Captain Shubhanshu Shukla addressing students at a space-education outreach event',
   },
   {
     tag: 'NEXUS · Tech Society',
@@ -317,27 +351,117 @@ export const impactStories = [
     body: 'A Class 11 team from Hyderabad built an IoT tray-weight system for their school canteen. Piloted for one semester, it cut kitchen waste by 34% and has been adopted permanently by the school.',
     credit: 'Hyderabad, Telangana · 2024',
     image: 'IMG-I-07',
+    photo: photos.felicitation,
+    photoAlt: 'Group Captain Shubhanshu Shukla being felicitated on stage at an education event',
   },
 ];
+
+export interface GalleryImage {
+  id: string;
+  src: string;
+  alt: string;
+}
 
 export const galleryDispatches = [
   {
     tag: 'COSMOS',
-    title: 'Ladakh — the first Space Experience Centre',
-    date: '[Month] 2024',
+    title: 'Outreach — where the wonder of space meets a classroom full of futures',
+    date: 'Foundation archive',
     caption:
-      'Students at the Space Experience & Innovation Centre in Ladakh work on collaborative learning and innovation projects, and connect to a global knowledge exchange — forming the first node of a Borderless Classroom Network that links learners across cultures, regions and disciplines.',
-    slots: ['IMG-G-02', 'IMG-G-03', 'IMG-G-04', 'IMG-G-05', 'IMG-G-06'],
-    status: 'BLOCKING' as ImageStatus,
+      'Group Captain Shubhanshu Shukla addresses students at space-education outreach events, speaks with national media about the mission — one planet, one home, infinite futures — and opens career pathways that once felt impossibly far away.',
+    status: 'AVAILABLE' as ImageStatus,
+    images: [
+      {
+        id: 'IMG-G-02',
+        src: photos.pressInteraction,
+        alt: 'Group Captain Shubhanshu Shukla speaking with national media about the mission',
+      },
+      {
+        id: 'IMG-G-03',
+        src: photos.podiumAddress,
+        alt: 'Addressing students from the podium at a space-education outreach event',
+      },
+      {
+        id: 'IMG-G-04',
+        src: photos.eventUnveiling,
+        alt: 'Unveiling a space-careers programme with students and educators',
+      },
+      {
+        id: 'IMG-G-05',
+        src: photos.sharingSpacePhotos,
+        alt: 'Sharing photographs from orbit with reporters after the mission',
+      },
+      {
+        id: 'IMG-G-06',
+        src: photos.felicitation,
+        alt: 'Felicitated on stage at a space-education event',
+      },
+    ] as GalleryImage[],
   },
   {
     tag: 'ORBIT',
-    title: 'Delhi — a classroom that reaches Nairobi',
-    date: '[Month] 2024',
+    title: 'Schools & community — the first nodes of a borderless classroom',
+    date: 'Foundation archive',
     caption:
-      'A Borderless Classroom session in Delhi: students collaborate with peers in Nairobi through a shared virtual learning environment, exchanging ideas and skills while working together on an interdisciplinary project.',
-    slots: ['IMG-G-07', 'IMG-G-08', 'IMG-G-09', 'IMG-G-10', 'IMG-G-11'],
-    status: 'BLOCKING' as ImageStatus,
+      'School visits and village welcomes: every conversation a small step toward a borderless classroom, and every community a partner. Bridge begins where the classroom meets the street.',
+    status: 'AVAILABLE' as ImageStatus,
+    images: [
+      {
+        id: 'IMG-G-07',
+        src: photos.schoolVisit,
+        alt: 'Students meet Group Captain Shubhanshu Shukla during a school visit',
+      },
+      {
+        id: 'IMG-G-08',
+        src: photos.studentsGroup,
+        alt: 'Students and teachers with the founder after a school session',
+      },
+      {
+        id: 'IMG-G-09',
+        src: photos.communityWalk,
+        alt: 'A community welcome during a village visit, with traditional drums',
+      },
+      {
+        id: 'IMG-G-10',
+        src: photos.welcomeCeremony,
+        alt: 'A traditional welcome from community members during a village visit',
+      },
+      {
+        id: 'IMG-G-11',
+        src: photos.classroomChildren,
+        alt: 'With young students in their classroom during a school outreach visit',
+      },
+    ] as GalleryImage[],
+  },
+  {
+    tag: 'COSMOS',
+    title: 'The Overview — the view that started everything',
+    date: 'Foundation archive',
+    caption:
+      'Earth from orbit, photographed during the founder’s mission. From up here, there are no borders — only one beautiful, fragile Earth.',
+    status: 'AVAILABLE' as ImageStatus,
+    images: [
+      {
+        id: 'IMG-G-12',
+        src: photos.orbitEarth,
+        alt: 'Earth’s limb from orbit beside the station’s solar arrays',
+      },
+      {
+        id: 'IMG-G-13',
+        src: photos.earthNight,
+        alt: 'City lights across Earth at night, seen from orbit',
+      },
+      {
+        id: 'IMG-G-14',
+        src: photos.earthNightCityLights,
+        alt: 'Networks of night-time city lights tracing the planet below',
+      },
+      {
+        id: 'IMG-G-15',
+        src: photos.orbitalSunriseArrays,
+        alt: 'An orbital sunrise breaking over Earth beyond the station’s solar arrays',
+      },
+    ] as GalleryImage[],
   },
 ];
 
@@ -415,5 +539,6 @@ export const closingQuote =
 export const founderQuote = {
   attribution: 'Group Captain Shubhanshu Shukla',
   quote: '“I was on a space mission. I looked down at Earth. I could not see any borders. Only one planet. Only one home.”',
-  relationship: '[State the actual relationship — patron, advisor, or quoted with permission. Required.]',
+  relationship: 'Founder, Earthizen Foundation',
+  portrait: photos.founderPortrait,
 };

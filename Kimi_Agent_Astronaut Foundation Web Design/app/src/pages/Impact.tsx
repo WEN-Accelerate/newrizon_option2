@@ -1,4 +1,4 @@
-import { assets, fiveYearTargets, impactStories } from '@/data/content';
+import { fiveYearTargets, impactStories, photos } from '@/data/content';
 import { CounterStat, GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -18,7 +18,7 @@ export default function Impact() {
           </>
         }
         sub="Every number here is a student who thought differently, a community that changed, a border that dissolved a little."
-        image={assets.earthDay}
+        image={photos.earthNightCityLights}
         tone="day"
       >
         <PrimaryLink to="/get-involved">Fund a classroom</PrimaryLink>
@@ -51,10 +51,10 @@ export default function Impact() {
               <ImageSlotCard
                 slot={{
                   id: story.image,
-                  spec: 'Foundation archive story image placeholder; guardian consent required before publication.',
-                  alt: story.headline,
-                  status: 'TO SOURCE',
-                  src: assets.classroom,
+                  spec: 'Foundation archive photograph — story-specific image to follow; guardian consent required before publication.',
+                  alt: story.photoAlt,
+                  status: 'REPLACE',
+                  src: story.photo,
                 }}
                 ratio="aspect-[4/3]"
                 className="rounded-none border-0"

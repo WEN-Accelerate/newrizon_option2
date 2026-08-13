@@ -59,36 +59,37 @@ export default function Gallery() {
                 <div className="flex flex-wrap items-center gap-3">
                   <Tag>{dispatch.tag}</Tag>
                   <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-amber-100/[0.78]">{dispatch.date}</span>
-                  <span className="rounded-full border border-red-200/40 bg-red-400/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-red-100">
+                  <span className="rounded-full border border-sky-200/35 bg-sky-300/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-sky-100">
                     {dispatch.status}
                   </span>
                 </div>
                 <h2 className="mt-5 font-display text-4xl font-semibold tracking-[-0.05em] text-[#fffdf5] sm:text-5xl">{dispatch.title}</h2>
                 <p className="mt-5 text-base leading-8 text-[#c8d4ea]/[0.74]">{dispatch.caption}</p>
               </div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#c8d4ea]/45">{dispatch.slots[0]} – {dispatch.slots[dispatch.slots.length - 1]}</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#c8d4ea]/45">{dispatch.images[0].id} – {dispatch.images[dispatch.images.length - 1].id}</p>
             </div>
             <div className="mt-8 grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
               <ImageSlotCard
                 slot={{
-                  id: dispatch.slots[0],
-                  spec: 'Lead dispatch image placeholder — students must be the primary subject.',
-                  alt: dispatch.title,
+                  id: dispatch.images[0].id,
+                  spec: 'Lead dispatch image — foundation archive photograph.',
+                  alt: dispatch.images[0].alt,
                   status: dispatch.status,
-                  src: assets.classroom,
+                  src: dispatch.images[0].src,
                 }}
                 ratio="aspect-[16/9]"
                 className="rounded-[1.6rem]"
               />
               <div className="grid grid-cols-2 gap-4">
-                {dispatch.slots.slice(1).map((slotId) => (
+                {dispatch.images.slice(1).map((image) => (
                   <ImageSlotCard
-                    key={slotId}
+                    key={image.id}
                     slot={{
-                      id: slotId,
-                      spec: 'Supporting dispatch image placeholder — distinct asset, consent recorded.',
-                      alt: dispatch.title,
+                      id: image.id,
+                      spec: 'Supporting dispatch image — foundation archive photograph.',
+                      alt: image.alt,
                       status: dispatch.status,
+                      src: image.src,
                     }}
                     ratio="aspect-[4/3]"
                     className="rounded-[1.2rem]"

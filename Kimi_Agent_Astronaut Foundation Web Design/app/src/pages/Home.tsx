@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { assets, closingQuote, coreValues, fiveYearTargets, programmeVerticals, roadmap, visionMission } from '@/data/content';
+import { assets, closingQuote, coreValues, fiveYearTargets, photos, programmeVerticals, roadmap, visionMission } from '@/data/content';
 import { CounterStat, GhostLink, ImageSlotCard, OrbitDial, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -21,7 +21,7 @@ export default function Home() {
           </>
         }
         sub="From space, there are no borders — only one beautiful, fragile Earth. We build the classrooms that teach children to see it that way, and the tools to act on it."
-        image={assets.heroEarth}
+        image={photos.earthNight}
         showCraft
       >
         <PrimaryLink to="/get-involved">Partner With Us</PrimaryLink>
@@ -112,7 +112,7 @@ export default function Home() {
 
       <section className="relative overflow-hidden py-24">
         <div className="absolute inset-0">
-          <img src={assets.orbitalSunrise} alt="" data-parallax={0.16} className="h-full w-full scale-110 object-cover opacity-42" />
+          <img src={photos.orbitalSunriseArrays} alt="" data-parallax={0.16} className="h-full w-full scale-110 object-cover opacity-42" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#05060f] via-[#05060f]/[0.58] to-[#05060f]" />
         </div>
         <div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-10">

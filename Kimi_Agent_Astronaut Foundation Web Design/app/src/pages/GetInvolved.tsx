@@ -1,4 +1,4 @@
-import { assets, involvementDoors } from '@/data/content';
+import { assets, involvementDoors, photos } from '@/data/content';
 import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -42,7 +42,7 @@ export default function GetInvolved() {
           </>
         }
         sub="Whether you run a school, a CSR budget, or just have a Saturday — there is a way to build this."
-        image={assets.classroom}
+        image={photos.studentsGroup}
         tone="day"
       >
         <PrimaryLink to="/contact">Talk to us</PrimaryLink>
@@ -66,9 +66,9 @@ export default function GetInvolved() {
             slot={{
               id: 'IMG-N-01',
               spec: 'Page hero, 21:9. A wide shot of a full classroom mid-activity — many students, visible energy.',
-              alt: 'A full classroom of students taking part in an Earthizen session',
-              status: 'TO COMMISSION',
-              src: assets.classroom,
+              alt: 'A classroom full of students with Group Captain Shubhanshu Shukla during a school outreach session',
+              status: 'AVAILABLE',
+              src: photos.schoolVisit,
             }}
             ratio="aspect-[21/9]"
             className="rounded-[2rem]"
@@ -130,9 +130,9 @@ export default function GetInvolved() {
               slot={{
                 id: 'IMG-N-02',
                 spec: 'Page hero, 21:9. Evidence-led: a student demonstrating a working build to an adult visitor.',
-                alt: 'A student demonstrating a completed project to a visiting partner',
-                status: 'TO COMMISSION',
-                src: assets.classroom,
+                alt: 'A student demonstrating a working wearable-device prototype at an innovation showcase',
+                status: 'AVAILABLE',
+                src: photos.studentInnovation,
               }}
               ratio="aspect-[21/9]"
               className="rounded-[2rem]"

@@ -1,4 +1,4 @@
-import { assets, complianceCards, founderQuote, leadershipTiers, visionMission } from '@/data/content';
+import { assets, complianceCards, founderQuote, leadershipTiers, photos, visionMission } from '@/data/content';
 import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -48,8 +48,9 @@ export default function About() {
             slot={{
               id: 'IMG-A-02',
               spec: 'Portrait, 4:3. Existing portrait against a dark background, flight suit, three-quarter turn.',
-              alt: 'Group Captain Shubhanshu Shukla',
-              status: 'PERMISSION REQUIRED',
+              alt: 'Group Captain Shubhanshu Shukla — official mission portrait in flight suit',
+              status: 'AVAILABLE',
+              src: founderQuote.portrait,
             }}
             ratio="aspect-[4/3]"
             className="mx-auto max-w-3xl rounded-[2rem]"
@@ -71,9 +72,9 @@ export default function About() {
             slot={{
               id: 'IMG-A-03',
               spec: 'The first classroom, or the founding moment the story describes. Documentary, unpolished, dated.',
-              alt: '[To be written once the story is supplied]',
-              status: 'TO SOURCE',
-              src: assets.classroom,
+              alt: 'Group Captain Shubhanshu Shukla with young students in their classroom',
+              status: 'AVAILABLE',
+              src: photos.classroomChildren,
             }}
             ratio="aspect-[3/2]"
             className="rounded-[2rem]"
