@@ -1,133 +1,135 @@
-import { assets, complianceCards, founderQuote, leadershipTiers, photos, visionMission } from '@/data/content';
-import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
+import { complianceCards, coreValues, founderQuote, leadershipTiers, photos, visionMission } from '@/data/content';
+import { FullBleed, GhostLink, PhotoFigure, SectionHeading, SolidLink } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
-import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
+import { useReveal } from '@/hooks/useMotion';
 
 export default function About() {
   const scope = useReveal<HTMLDivElement>();
-  useParallax();
-  usePageIntro();
 
   return (
-    <main ref={scope} className="relative z-10">
-      <PageHero
+    <main ref={scope} className="bg-black">
+      <FullBleed
+        image={photos.orbitEarth}
+        alt="Earth's limb from orbit beside the station's solar arrays"
         eyebrow="About Us"
         title={
           <>
-            The Spark Behind <span className="text-gradient-orbit">Earthizen</span>
+            The Spark
+            <br />
+            Behind Earthizen
           </>
         }
         sub="One perspective, seen from orbit, turned into a curriculum."
-        image={assets.starfield}
-        tone="stars"
-        showCraft
+        short
       >
-        <PrimaryLink to="/programmes">Explore the programmes</PrimaryLink>
-        <GhostLink to="/get-involved">Join the movement</GhostLink>
-      </PageHero>
+        <SolidLink to="/programmes">Explore The Programmes</SolidLink>
+        <GhostLink to="/get-involved">Join The Movement</GhostLink>
+      </FullBleed>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="relative" data-reveal>
-            <div className="absolute -left-10 top-10 h-44 w-44 rounded-full bg-violet-500/20 blur-3xl" />
-            <img src={assets.astronaut} alt="Astronaut placeholder graphic" className="float-slow relative mx-auto w-full max-w-[430px] drop-shadow-[0_0_60px_rgba(134,66,255,0.35)]" />
-          </div>
-          <figure className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-12" data-reveal>
-            <Tag>Founding quote</Tag>
-            <blockquote className="mt-8 font-serif-display text-4xl leading-tight text-[#fffdf5] sm:text-5xl">
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-[1600px] items-start gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+          <PhotoFigure
+            src={founderQuote.portrait}
+            alt="Group Captain Shubhanshu Shukla — official mission portrait in flight suit"
+            caption={`${founderQuote.attribution} · ${founderQuote.relationship}`}
+            ratio="aspect-[16/9]"
+          />
+          <blockquote data-reveal>
+            <p className="eyebrow">Founding Quote</p>
+            <p className="mt-6 max-w-2xl text-balance font-display text-3xl font-light leading-snug text-white sm:text-4xl">
               {founderQuote.quote}
-            </blockquote>
-            <figcaption className="mt-8 border-t hairline pt-6">
-              <p className="font-display text-xl font-semibold text-[#fffdf5]">{founderQuote.attribution}</p>
-              <p className="mt-3 text-sm leading-7 text-amber-100/[0.78]">{founderQuote.relationship}</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div className="mt-8">
-          <ImageSlotCard
-            slot={{
-              id: 'IMG-A-02',
-              spec: 'Portrait, 4:3. Existing portrait against a dark background, flight suit, three-quarter turn.',
-              alt: 'Group Captain Shubhanshu Shukla — official mission portrait in flight suit',
-              status: 'AVAILABLE',
-              src: founderQuote.portrait,
-            }}
-            ratio="aspect-[4/3]"
-            className="mx-auto max-w-3xl rounded-[2rem]"
-          />
+            </p>
+            <footer className="mt-8 border-t-2 border-white/80 pt-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em]">{founderQuote.attribution}</p>
+              <p className="mt-2 text-[12px] font-medium uppercase tracking-[0.26em] text-white/55">{founderQuote.relationship}</p>
+            </footer>
+          </blockquote>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 lg:px-10">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <SectionHeading eyebrow="How it started" title="The origin story" />
-            <div className="mt-8 rounded-[2rem] border border-amber-200/30 bg-amber-300/[0.08] p-7" data-reveal>
-              <p className="text-lg leading-9 text-[#e6e6e1]/[0.82]">
-                [Approximately 200 words, first person if possible. Required from the Foundation: who started Earthizen, what they saw that made them start it, what the first classroom was, and what happened in it.]
-              </p>
-            </div>
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-[1600px] items-start gap-14 lg:grid-cols-2">
+          <div data-reveal>
+            <SectionHeading eyebrow="How It Started" title="The origin story" />
+            <p className="mt-8 max-w-xl text-[15px] font-light leading-8 text-white/70">
+              [Approximately 200 words, first person if possible. Required from the Foundation: who started Earthizen, what
+              they saw that made them start it, what the first classroom was, and what happened in it.]
+            </p>
           </div>
-          <ImageSlotCard
-            slot={{
-              id: 'IMG-A-03',
-              spec: 'The first classroom, or the founding moment the story describes. Documentary, unpolished, dated.',
-              alt: 'Group Captain Shubhanshu Shukla with young students in their classroom',
-              status: 'AVAILABLE',
-              src: photos.classroomChildren,
-            }}
+          <PhotoFigure
+            src={photos.classroomChildren}
+            alt="Group Captain Shubhanshu Shukla with young students in their classroom"
+            caption="The classroom where it begins"
             ratio="aspect-[3/2]"
-            className="rounded-[2rem]"
           />
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
-        <SectionHeading eyebrow="What we are for" title="Vision & Mission" align="center" />
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <article className="rounded-[2rem] border hairline bg-white/[0.035] p-8" data-reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Vision</p>
-            <p className="mt-6 font-serif-display text-3xl leading-tight text-[#fffdf5]">{visionMission.vision}</p>
-          </article>
-          <article className="rounded-[2rem] border hairline bg-white/[0.035] p-8" data-reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Mission</p>
-            <p className="mt-6 text-lg leading-9 text-[#e6e6e1]/[0.82]">{visionMission.mission}</p>
-          </article>
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-[1600px] gap-14 lg:grid-cols-2">
+          <div className="border-t-2 border-white/80 pt-6" data-reveal>
+            <p className="eyebrow">Vision</p>
+            <p className="mt-5 text-balance font-display text-2xl font-light leading-snug text-white/90 sm:text-3xl">
+              {visionMission.vision}
+            </p>
+          </div>
+          <div className="border-t-2 border-white/80 pt-6" data-reveal>
+            <p className="eyebrow">Mission</p>
+            <p className="mt-5 max-w-xl text-base font-light leading-8 text-white/75">{visionMission.mission}</p>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
-        <SectionHeading
-          eyebrow="The people behind"
-          title="The team and Leadership"
-          sub="Five portrait slots are intentionally held until real names, roles and photographs are cleared."
-        />
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-          {leadershipTiers.map((leader, index) => (
-            <article key={leader.tier} className="rounded-[1.6rem] border hairline bg-white/[0.035] p-5" data-reveal>
-              <div className="image-slot grid aspect-square place-items-center rounded-[1.2rem] p-4 text-center">
-                <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-sky-100/[0.78]">IMG-A-{String(index + 4).padStart(2, '0')}</p>
-                  <p className="mt-3 text-xs leading-6 text-[#c8d4ea]/[0.62]">Portrait of [name], [role], Earthizen Foundation</p>
-                  <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-red-100/[0.78]">BLOCKING</p>
-                </div>
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1600px]">
+          <SectionHeading eyebrow="Core Values" title="Five values. One planet." />
+          <div className="mt-12">
+            {coreValues.map((value, index) => (
+              <div
+                key={value.name}
+                className="grid gap-3 border-t hairline py-6 sm:grid-cols-[80px_260px_1fr] sm:items-baseline"
+                data-reveal
+              >
+                <span className="tabular font-condensed text-2xl font-semibold text-white/40">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em]">{value.name}</h3>
+                <p className="max-w-3xl text-[15px] font-light leading-7 text-white/70">{value.copy}</p>
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold text-[#fffdf5]">{leader.tier}</h3>
-              <p className="mt-3 text-sm leading-7 text-[#c8d4ea]/70">{leader.copy}</p>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
-        <SectionHeading eyebrow="Legal & Registration" title="Registered & Compliant" align="center" />
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {complianceCards.map((card) => (
-            <article key={card.title} className="glass-panel rounded-[1.6rem] p-6" data-reveal>
-              <h3 className="font-display text-xl font-semibold text-[#fffdf5]">{card.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-[#c8d4ea]/[0.72]">{card.copy}</p>
-            </article>
-          ))}
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1600px]">
+          <SectionHeading
+            eyebrow="The People Behind"
+            title="Team & leadership"
+            sub="Names, roles and photographs are published only once cleared — no placeholders pretending to be people."
+          />
+          <div className="mt-12">
+            {leadershipTiers.map((leader) => (
+              <div key={leader.tier} className="grid gap-3 border-t hairline py-6 sm:grid-cols-[320px_1fr] sm:items-baseline" data-reveal>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em]">{leader.tier}</h3>
+                <p className="max-w-3xl text-[15px] font-light leading-7 text-white/70">{leader.copy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1600px]">
+          <SectionHeading eyebrow="Legal & Registration" title="Registered & compliant" />
+          <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-4">
+            {complianceCards.map((card) => (
+              <div key={card.title} className="border-t-2 border-white/80 pt-5" data-reveal>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em]">{card.title}</h3>
+                <p className="mt-4 text-sm font-light leading-7 text-white/65">{card.copy}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

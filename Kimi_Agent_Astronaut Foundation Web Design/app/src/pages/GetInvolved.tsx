@@ -1,7 +1,8 @@
-import { assets, involvementDoors, photos } from '@/data/content';
-import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
+import { Link } from 'react-router-dom';
+import { involvementDoors, photos } from '@/data/content';
+import { FullBleed, GhostLink, PhotoFigure, SectionHeading, SolidLink } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
-import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
+import { useReveal } from '@/hooks/useMotion';
 
 const partnershipTiers = [
   {
@@ -27,115 +28,111 @@ const partnershipTiers = [
   },
 ];
 
+const scheduleVII = [
+  ['Education', 'Earthizen Curriculum, Borderless Classroom Network'],
+  ['Skill development', 'Code the Future, Maker Bharat, Impact Portfolio'],
+  ['Environmental sustainability', 'Community Lab, Civic Watch, Future Earth Explorers'],
+];
+
 export default function GetInvolved() {
   const scope = useReveal<HTMLDivElement>();
-  useParallax();
-  usePageIntro();
 
   return (
-    <main ref={scope} className="relative z-10">
-      <PageHero
-        eyebrow="Get Involved"
-        title={
-          <>
-            Four ways <span className="text-gradient-orbit">in.</span>
-          </>
-        }
-        sub="Whether you run a school, a CSR budget, or just have a Saturday — there is a way to build this."
+    <main ref={scope} className="bg-black">
+      <FullBleed
         image={photos.studentsGroup}
-        tone="day"
+        alt="Students and teachers with Group Captain Shubhanshu Shukla in a school courtyard"
+        eyebrow="Get Involved"
+        title="Four Ways In."
+        sub="Whether you run a school, a CSR budget, or just have a Saturday — there is a way to build this."
+        short
       >
-        <PrimaryLink to="/contact">Talk to us</PrimaryLink>
-        <GhostLink to="/programmes">See the programmes</GhostLink>
-      </PageHero>
+        <SolidLink to="/contact">Talk To Us</SolidLink>
+        <GhostLink to="/programmes">See The Programmes</GhostLink>
+      </FullBleed>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {involvementDoors.map((door, index) => (
-            <article key={door.title} className="group relative overflow-hidden rounded-[1.8rem] border hairline bg-white/[0.035] p-7 transition hover:-translate-y-2 hover:bg-white/[0.06]" data-reveal>
-              <span className="absolute -right-4 -top-6 font-display text-8xl font-semibold tracking-[-0.08em] text-white/[0.05]">0{index + 1}</span>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-sky-200/70">Door {index + 1}</p>
-              <h2 className="mt-5 font-display text-3xl font-semibold text-[#fffdf5]">{door.title}</h2>
-              <p className="mt-5 min-h-32 text-sm leading-7 text-[#c8d4ea]/[0.72]">{door.copy}</p>
-              <PrimaryLink to="/contact" dark>{door.cta}</PrimaryLink>
-            </article>
-          ))}
-        </div>
-        <div className="mt-10">
-          <ImageSlotCard
-            slot={{
-              id: 'IMG-N-01',
-              spec: 'Page hero, 21:9. A wide shot of a full classroom mid-activity — many students, visible energy.',
-              alt: 'A classroom full of students with Group Captain Shubhanshu Shukla during a school outreach session',
-              status: 'AVAILABLE',
-              src: photos.schoolVisit,
-            }}
-            ratio="aspect-[21/9]"
-            className="rounded-[2rem]"
-          />
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="grid gap-x-10 gap-y-14 sm:grid-cols-2 xl:grid-cols-4">
+            {involvementDoors.map((door, index) => (
+              <div key={door.title} className="flex flex-col border-t-2 border-white/80 pt-5" data-reveal>
+                <span className="tabular font-condensed text-5xl font-semibold text-white/35">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h2 className="mt-4 font-display text-2xl font-bold uppercase tracking-[0.02em]">{door.title}</h2>
+                <p className="mt-4 flex-1 text-[15px] font-light leading-7 text-white/70">{door.copy}</p>
+                <Link
+                  to="/contact"
+                  className="mt-6 inline-block text-[12px] font-semibold uppercase tracking-[0.24em] text-white underline decoration-2 underline-offset-8 hover:text-white/70"
+                >
+                  {door.cta}
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="mt-16">
+            <PhotoFigure
+              src={photos.schoolVisit}
+              alt="A classroom full of students with Group Captain Shubhanshu Shukla during a school outreach session"
+              caption="A school outreach session — where every partnership starts"
+              ratio="aspect-[21/9]"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
-        <div className="absolute inset-0">
-          <img src={assets.orbitalSunrise} alt="" data-parallax={0.14} className="h-full w-full scale-110 object-cover opacity-28" />
-          <div className="absolute inset-0 bg-[#05060f]/[0.78]" />
-        </div>
-        <div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-10">
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1600px]">
           <SectionHeading
             eyebrow="CSR & Funding"
             title="Fund a classroom. Measure the change."
             sub="Earthizen partnerships are scoped, costed and reported like any other line in your budget — because that is what makes them defensible."
           />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="mt-14 grid gap-x-10 gap-y-12 lg:grid-cols-3">
             {partnershipTiers.map((tier) => (
-              <article key={tier.name} className="glass-panel rounded-[1.8rem] p-7" data-reveal>
-                <Tag>{tier.schools}</Tag>
-                <h3 className="mt-5 font-display text-3xl font-semibold text-[#fffdf5]">{tier.name}</h3>
-                <p className="mt-4 font-mono text-sm uppercase tracking-[0.2em] text-amber-100/[0.82]">{tier.cost}</p>
-                <p className="mt-5 text-sm leading-7 text-[#c8d4ea]/[0.72]">{tier.scope}</p>
-                <p className="mt-5 border-t hairline pt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-sky-100/[0.68]">{tier.reporting}</p>
-              </article>
+              <div key={tier.name} className="border-t-2 border-white/80 pt-5" data-reveal>
+                <p className="eyebrow !text-white/60">{tier.schools}</p>
+                <h3 className="mt-3 font-display text-2xl font-bold uppercase tracking-[0.02em]">{tier.name}</h3>
+                <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.22em] text-white/50">{tier.cost}</p>
+                <p className="mt-4 text-[15px] font-light leading-7 text-white/70">{tier.scope}</p>
+                <p className="mt-4 border-t hairline pt-4 text-[11px] font-medium uppercase tracking-[0.22em] text-white/50">
+                  {tier.reporting}
+                </p>
+              </div>
             ))}
           </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-            <div className="rounded-[2rem] border hairline bg-white/[0.035] p-7" data-reveal>
-              <h3 className="font-display text-2xl font-semibold text-[#fffdf5]">Schedule VII clause-mapping</h3>
-              <div className="mt-6 overflow-hidden rounded-[1.2rem] border hairline">
-                {[
-                  ['Education', 'Earthizen Curriculum, Borderless Classroom Network'],
-                  ['Skill development', 'Code the Future, Maker Bharat, Impact Portfolio'],
-                  ['Environmental sustainability', 'Community Lab, Civic Watch, Future Earth Explorers'],
-                ].map(([clause, mapping]) => (
-                  <div key={clause} className="grid gap-2 border-b hairline p-4 last:border-b-0 sm:grid-cols-[180px_1fr]">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-sky-100/[0.72]">{clause}</p>
-                    <p className="text-sm leading-6 text-[#c8d4ea]/[0.72]">{mapping}</p>
+
+          <div className="mt-16 grid gap-14 lg:grid-cols-2">
+            <div data-reveal>
+              <p className="eyebrow">Schedule VII clause-mapping</p>
+              <div className="mt-6">
+                {scheduleVII.map(([clause, mapping]) => (
+                  <div key={clause} className="grid gap-2 border-t hairline py-5 sm:grid-cols-[240px_1fr]">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em]">{clause}</p>
+                    <p className="text-[15px] font-light leading-7 text-white/70">{mapping}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="rounded-[2rem] border border-amber-200/30 bg-amber-300/[0.08] p-7" data-reveal>
-              <h3 className="font-display text-2xl font-semibold text-[#fffdf5]">Partnership pack</h3>
-              <p className="mt-4 text-sm leading-7 text-[#e6e6e1]/[0.78]">
-                Cost per child: [cost]. Downloadable partnership pack: [gated behind name and email]. Book a call with the partnerships team to scope a defensible CSR line.
+            <div data-reveal>
+              <p className="eyebrow">Partnership pack</p>
+              <p className="mt-6 max-w-xl text-[15px] font-light leading-8 text-white/70">
+                Cost per child: [cost]. Downloadable partnership pack: [gated behind name and email]. Book a call with the
+                partnerships team to scope a defensible CSR line.
               </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <PrimaryLink to="/contact" dark>Book a call</PrimaryLink>
-                <GhostLink to="/impact">Review evidence</GhostLink>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <SolidLink to="/contact">Book A Call</SolidLink>
+                <GhostLink to="/impact">Review Evidence</GhostLink>
               </div>
             </div>
           </div>
-          <div className="mt-10">
-            <ImageSlotCard
-              slot={{
-                id: 'IMG-N-02',
-                spec: 'Page hero, 21:9. Evidence-led: a student demonstrating a working build to an adult visitor.',
-                alt: 'A student demonstrating a working wearable-device prototype at an innovation showcase',
-                status: 'AVAILABLE',
-                src: photos.studentInnovation,
-              }}
+
+          <div className="mt-16">
+            <PhotoFigure
+              src={photos.studentInnovation}
+              alt="A student demonstrating a working wearable-device prototype at an innovation showcase"
+              caption="Evidence-led — a student demonstrating a working build"
               ratio="aspect-[21/9]"
-              className="rounded-[2rem]"
             />
           </div>
         </div>

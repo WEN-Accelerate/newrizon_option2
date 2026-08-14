@@ -12,14 +12,13 @@ export function useReveal<T extends HTMLElement>(selector = '[data-reveal]') {
       gsap.utils.toArray<HTMLElement>(selector).forEach((el, index) => {
         gsap.fromTo(
           el,
-          { autoAlpha: 0, y: 42, filter: 'blur(10px)' },
+          { autoAlpha: 0, y: 26 },
           {
             autoAlpha: 1,
             y: 0,
-            filter: 'blur(0px)',
-            duration: 1.05,
-            ease: 'power3.out',
-            delay: (index % 4) * 0.06,
+            duration: 0.85,
+            ease: 'power2.out',
+            delay: (index % 4) * 0.05,
             scrollTrigger: {
               trigger: el,
               start: 'top 86%',
@@ -101,8 +100,8 @@ export function usePageIntro() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         '[data-page-intro]',
-        { autoAlpha: 0, y: 28, filter: 'blur(12px)' },
-        { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 1.1, stagger: 0.08, ease: 'power3.out' },
+        { autoAlpha: 0, y: 22 },
+        { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.07, ease: 'power2.out' },
       );
     });
     return () => ctx.revert();

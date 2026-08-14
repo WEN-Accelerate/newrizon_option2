@@ -1,93 +1,73 @@
-import { assets, programmeVerticals } from '@/data/content';
-import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
+import { impactStories, photos, programmeVerticals } from '@/data/content';
+import { FullBleed, GhostLink, SolidLink } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
-import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
+import { useReveal } from '@/hooks/useMotion';
 
 export default function Programmes() {
   const scope = useReveal<HTMLDivElement>();
-  useParallax();
-  usePageIntro();
 
   return (
-    <main ref={scope} className="relative z-10">
-      <PageHero
+    <main ref={scope} className="bg-black">
+      <FullBleed
+        image={photos.earthNightCityLights}
+        alt="Networks of night-time city lights tracing the planet below"
         eyebrow="Programmes"
         title={
           <>
-            Four Programme <span className="text-gradient-orbit">Verticals</span>
+            Four Verticals.
+            <br />
+            One Planetary Classroom.
           </>
         }
         sub="Four interconnected pillars — each distinct, each essential. Together they form a complete education for planetary citizenship."
-        image={assets.starfield}
-        tone="stars"
+        short
       >
-        <PrimaryLink to="/get-involved">Partner With Us</PrimaryLink>
-        <GhostLink to="/impact">See the Evidence</GhostLink>
-      </PageHero>
+        <SolidLink to="/get-involved">Partner With Us</SolidLink>
+        <GhostLink to="/impact">See The Evidence</GhostLink>
+      </FullBleed>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-20 sm:px-8 lg:px-10">
-        <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
-          <aside className="lg:sticky lg:top-28 lg:self-start" data-reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.74]">Vertical map</p>
-            <div className="mt-5 grid gap-3">
-              {programmeVerticals.map((vertical) => (
-                <a
-                  key={vertical.id}
-                  href={`#${vertical.id}`}
-                  className="rounded-2xl border hairline bg-white/[0.035] px-4 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#c8d4ea]/70 transition hover:border-sky-200/45 hover:text-sky-100"
-                >
-                  {vertical.index} · {vertical.name}
-                </a>
-              ))}
-            </div>
-          </aside>
-
-          <div className="space-y-24">
-            {programmeVerticals.map((vertical, index) => (
-              <section key={vertical.id} id={vertical.id} className="scroll-mt-28">
-                <div className={`grid items-start gap-8 ${index % 2 ? 'lg:grid-cols-[0.9fr_1.1fr]' : 'lg:grid-cols-[1.1fr_0.9fr]'}`}>
-                  <div className={index % 2 ? 'lg:order-2' : ''}>
-                    <Tag>{vertical.subtitle}</Tag>
-                    <h2 className="mt-5 font-display text-5xl font-semibold tracking-[-0.05em] text-[#fffdf5] sm:text-6xl">
-                      {vertical.index} · {vertical.name}
-                    </h2>
-                    <p className="mt-6 text-lg leading-9 text-[#e6e6e1]/80">{vertical.intro}</p>
-                    <div className="mt-8 grid gap-4">
-                      {vertical.initiatives.map((initiative) => (
-                        <article key={initiative.title} className="rounded-[1.4rem] border hairline bg-white/[0.035] p-5 transition hover:bg-white/[0.06]" data-reveal>
-                          <h3 className="font-display text-xl font-semibold text-[#fffdf5]">{initiative.title}</h3>
-                          <p className="mt-3 text-sm leading-7 text-[#c8d4ea]/[0.72]">{initiative.copy}</p>
-                        </article>
-                      ))}
-                    </div>
-                  </div>
-                  <div className={index % 2 ? 'lg:order-1' : ''}>
-                    <ImageSlotCard slot={vertical.image} ratio="aspect-[3/2]" className="rounded-[2rem]" />
-                    <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#c8d4ea]/45" data-reveal>
-                      Placeholder schedule slot · approved alt text retained for CMS
-                    </p>
-                  </div>
-                </div>
-              </section>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-[1500px] px-5 pb-24 sm:px-8 lg:px-10">
-        <div className="glass-panel rounded-[2rem] p-8 text-center sm:p-12" data-reveal>
-          <SectionHeading
-            eyebrow="Build with us"
-            title="Every vertical needs schools, funders and mentors."
-            sub="Bring one pillar into a classroom — or help launch the whole constellation."
-            align="center"
+      {programmeVerticals.map((vertical) => (
+        <article key={vertical.id} id={vertical.id} className="scroll-mt-16">
+          <FullBleed
+            image={vertical.image.src ?? photos.earthNight}
+            alt={vertical.image.alt}
+            eyebrow={`EF-${vertical.index} · ${vertical.subtitle}`}
+            title={vertical.name}
+            sub={vertical.intro}
+            short
           />
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <PrimaryLink to="/get-involved">Partner A School</PrimaryLink>
-            <GhostLink to="/contact">Talk to the team</GhostLink>
-          </div>
-        </div>
-      </section>
+          <section className="border-t hairline bg-black px-6 py-20 sm:px-10 lg:px-16">
+            <div className="mx-auto grid max-w-[1600px] gap-14 lg:grid-cols-[0.85fr_1.15fr]">
+              <div data-reveal>
+                <p className="eyebrow">Initiatives</p>
+                <h2 className="mt-4 font-display text-3xl font-bold uppercase leading-tight sm:text-4xl">
+                  Inside {vertical.name}
+                </h2>
+              </div>
+              <div>
+                {vertical.initiatives.map((initiative) => (
+                  <div key={initiative.title} className="border-t hairline py-6 first:border-t-0 first:pt-0" data-reveal>
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.18em]">{initiative.title}</h3>
+                    <p className="mt-3 max-w-3xl text-[15px] font-light leading-7 text-white/70">{initiative.copy}</p>
+                  </div>
+                ))}
+                {(() => {
+                  const story = impactStories.find((s) => s.tag.startsWith(vertical.name));
+                  if (!story) return null;
+                  return (
+                    <div className="mt-4 border-t-2 border-white/80 pt-6" data-reveal>
+                      <p className="eyebrow !text-white/60">From the field · {story.credit}</p>
+                      <p className="mt-3 max-w-3xl text-lg font-light leading-8 text-white/85">
+                        {story.headline} {story.body}
+                      </p>
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
+          </section>
+        </article>
+      ))}
 
       <PageEndBand />
     </main>

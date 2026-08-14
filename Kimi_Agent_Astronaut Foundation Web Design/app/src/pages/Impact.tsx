@@ -1,94 +1,102 @@
 import { fiveYearTargets, impactStories, photos } from '@/data/content';
-import { CounterStat, GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
+import { FullBleed, GhostLink, SectionHeading, SolidLink, StatCounter } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
-import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
+import { useReveal } from '@/hooks/useMotion';
+
+const measurementRules = [
+  'Every Earthizen project produces an artefact — a device, a document, a resolution, a dataset. We publish what worked and what did not.',
+  'Every school partnership is reviewed at the end of each term against outcomes agreed at the start.',
+  'Every funder receives quarterly briefings and an annual audited impact report.',
+  'Where a claim cannot be evidenced, we do not make it.',
+];
 
 export default function Impact() {
   const scope = useReveal<HTMLDivElement>();
-  useParallax();
-  usePageIntro();
 
   return (
-    <main ref={scope} className="relative z-10">
-      <PageHero
+    <main ref={scope} className="bg-black">
+      <FullBleed
+        image={photos.sharingSpacePhotos}
+        alt="Group Captain Shubhanshu Shukla sharing photographs from orbit with reporters"
         eyebrow="Impact"
         title={
           <>
-            Learning that <span className="text-gradient-orbit">changes things.</span>
+            Learning That
+            <br />
+            Changes Things.
           </>
         }
         sub="Every number here is a student who thought differently, a community that changed, a border that dissolved a little."
-        image={photos.earthNightCityLights}
-        tone="day"
+        short
       >
-        <PrimaryLink to="/get-involved">Fund a classroom</PrimaryLink>
-        <GhostLink to="/gallery">See field notes</GhostLink>
-      </PageHero>
+        <SolidLink to="/get-involved">Fund A Classroom</SolidLink>
+        <GhostLink to="/gallery">See Field Notes</GhostLink>
+      </FullBleed>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
-        <SectionHeading
-          eyebrow="Five-Year Targets"
-          title="The Scale We're Building"
-          sub="These are targets, not results. They are published so we can be measured against them."
-          align="center"
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {fiveYearTargets.map((stat) => (
-            <CounterStat key={stat.label} {...stat} />
-          ))}
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1600px]">
+          <SectionHeading
+            eyebrow="Five-Year Targets"
+            title="The scale we're building"
+            sub="These are targets, not results. They are published so we can be measured against them."
+          />
+          <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {fiveYearTargets.map((stat) => (
+              <StatCounter key={stat.label} {...stat} />
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 lg:px-10">
-        <SectionHeading
-          eyebrow="Stories of Change"
-          title="Impact from the Field"
-          sub="Six projects. Six places. Each one already finished, and each one documented."
-        />
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {impactStories.map((story, index) => (
-            <article key={story.headline} className="group overflow-hidden rounded-[2rem] border hairline bg-white/[0.035]" data-reveal>
-              <ImageSlotCard
-                slot={{
-                  id: story.image,
-                  spec: 'Foundation archive photograph — story-specific image to follow; guardian consent required before publication.',
-                  alt: story.photoAlt,
-                  status: 'REPLACE',
-                  src: story.photo,
-                }}
-                ratio="aspect-[4/3]"
-                className="rounded-none border-0"
-              />
-              <div className="p-7">
-                <Tag>{story.tag}</Tag>
-                <h3 className="mt-5 font-display text-3xl font-semibold leading-tight tracking-[-0.04em] text-[#fffdf5]">
-                  {story.headline}
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-[#c8d4ea]/[0.72]">{story.body}</p>
-                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t hairline pt-5">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-sky-100/[0.68]">{story.credit}</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-100/70">Evidence: [required]</p>
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1600px]">
+          <SectionHeading
+            eyebrow="Stories of Change"
+            title="Impact from the field"
+            sub="Six projects. Six places. Each one already finished, and each one documented."
+          />
+          <div className="mt-14 space-y-20">
+            {impactStories.map((story, index) => (
+              <article
+                key={story.headline}
+                className={`grid items-center gap-8 lg:grid-cols-2 ${index % 2 ? 'lg:[&>figure]:order-2' : ''}`}
+              >
+                <figure data-reveal>
+                  <div className="aspect-[16/10] overflow-hidden bg-[#0a0a0a]">
+                    <img src={story.photo} alt={story.photoAlt} className="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                  <figcaption className="mt-3 text-[11px] font-medium uppercase tracking-[0.22em] text-white/45">
+                    Foundation archive · story-specific image to follow
+                  </figcaption>
+                </figure>
+                <div data-reveal>
+                  <p className="eyebrow !text-white/60">{story.tag}</p>
+                  <h3 className="mt-4 max-w-xl text-balance font-display text-3xl font-bold uppercase leading-tight sm:text-4xl">
+                    {story.headline}
+                  </h3>
+                  <p className="mt-5 max-w-xl text-[15px] font-light leading-8 text-white/70">{story.body}</p>
+                  <p className="mt-6 text-[12px] font-semibold uppercase tracking-[0.26em] text-white/50">{story.credit}</p>
                 </div>
-                <p className="sr-only">Story {index + 1}</p>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1100px] px-5 py-24 sm:px-8 lg:px-10">
-        <SectionHeading eyebrow="How we measure" title="Plain rules. Public evidence." align="center" />
-        <div className="mt-12 space-y-8 text-center">
-          {[
-            'Every Earthizen project produces an artefact — a device, a document, a resolution, a dataset. We publish what worked and what did not.',
-            'Every school partnership is reviewed at the end of each term against outcomes agreed at the start.',
-            'Every funder receives quarterly briefings and an annual audited impact report.',
-            'Where a claim cannot be evidenced, we do not make it.',
-          ].map((line) => (
-            <p key={line} className="mx-auto max-w-4xl font-serif-display text-2xl leading-snug text-[#fffdf5] sm:text-3xl" data-reveal>
-              {line}
-            </p>
-          ))}
+      <section className="border-t hairline bg-black px-6 py-24 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1100px]">
+          <SectionHeading eyebrow="How We Measure" title="Plain rules. Public evidence." align="center" />
+          <div className="mt-12">
+            {measurementRules.map((line) => (
+              <p
+                key={line}
+                className="border-t hairline py-7 text-center text-lg font-light leading-8 text-white/80 sm:text-xl"
+                data-reveal
+              >
+                {line}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
