@@ -1,0 +1,16 @@
+# Netlify configuration for the Earthizen Foundation site.
+# The app lives in a nested folder, so build it explicitly from the repo root.
+
+[build]
+  command = 'cd "Kimi_Agent_Astronaut Foundation Web Design/app" && npm ci --no-audit --no-fund && npm run build'
+  publish = "Kimi_Agent_Astronaut Foundation Web Design/app/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Single-page app (react-router): serve index.html for every route so
+# deep links and page refreshes don't 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
