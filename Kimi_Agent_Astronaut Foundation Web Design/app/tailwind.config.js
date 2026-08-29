@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["'IBM Plex Mono'", "monospace"],
+        sans: ["'Barlow'", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["'Barlow'", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

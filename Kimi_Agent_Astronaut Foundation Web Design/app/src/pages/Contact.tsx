@@ -33,7 +33,7 @@ export default function Contact() {
         <GhostLink to="/about">About the foundation</GhostLink>
       </PageHero>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <SectionHeading eyebrow="Reach the mission crew" title="One inbox per orbit." />

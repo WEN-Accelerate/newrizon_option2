@@ -72,7 +72,7 @@ export const navLinks = [
 
 export const visionMission = {
   vision:
-    'A world where every individual — regardless of nationality, religion or origin — identifies as an Earthizen: a citizen of Earth who uses technology, empathy and purpose to build a borderless, thriving civilisation, on Earth and beyond.',
+    'A world where every individual, regardless of nationality, religion or origin, identifies as an Earthizen: a citizen of Earth who uses technology, empathy and purpose to build a borderless, thriving civilisation, on Earth and beyond.',
   mission:
     'To cultivate a generation of Earthizens through transformative education that connects classrooms to communities, harnesses technology for human progress, builds cross-cultural understanding, and instils a shared planetary identity rooted in one simple truth: from space, there are no borders.',
 };
@@ -105,10 +105,10 @@ export const programmeVerticals: ProgrammeVertical[] = [
     id: 'orbit',
     index: '01',
     name: 'ORBIT',
-    subtitle: 'Global Citizenship — Education & Cultural Exchange',
+    subtitle: 'Global Citizenship · Education & Cultural Exchange',
     body: 'Connects students across countries for joint academic work, collaborative storytelling and global summits.',
     intro:
-      'Formed by consolidating the original ORBIT and ATLAS verticals, ORBIT connects students across countries for joint academic work, collaborative storytelling and global summits — building the empathy and perspective of true planetary citizens.',
+      'Formed by consolidating the original ORBIT and ATLAS verticals, ORBIT connects students across countries for joint academic work, collaborative storytelling and global summits, building the empathy and perspective of true planetary citizens.',
     initiatives: [
       {
         title: 'Borderless Classroom Network',
@@ -124,7 +124,7 @@ export const programmeVerticals: ProgrammeVertical[] = [
       },
       {
         title: 'Stories Without Borders',
-        copy: 'Multi-country collaborative storytelling — students in different nations co-author a single narrative, in their own languages.',
+        copy: 'Multi-country collaborative storytelling: students in different nations co-author a single narrative, in their own languages.',
       },
     ],
     image: {
@@ -139,14 +139,14 @@ export const programmeVerticals: ProgrammeVertical[] = [
     id: 'nexus',
     index: '02',
     name: 'NEXUS',
-    subtitle: 'Technology & Innovation — Making every child technologically fluent',
+    subtitle: 'Technology & Innovation · Making every child technologically fluent',
     body: 'AI, coding and maker skills, aimed at real problems in real communities.',
     intro:
-      'NEXUS equips underserved youth with AI, coding and maker skills — not as abstract learning, but as tools to solve real problems in their own communities. Every bootcamp, hackathon and makerspace is anchored in impact.',
+      'NEXUS equips underserved youth with AI, coding and maker skills: not as abstract learning, but as tools to solve real problems in their own communities. Every bootcamp, hackathon and makerspace is anchored in impact.',
     initiatives: [
       {
         title: 'Code the Future',
-        copy: 'AI, coding and data-literacy bootcamps for underserved youth — six-week intensive programmes with certified learning pathways and mentorship.',
+        copy: 'AI, coding and data-literacy bootcamps for underserved youth: six-week intensive programmes with certified learning pathways and mentorship.',
       },
       {
         title: 'Impact Portfolio',
@@ -154,7 +154,7 @@ export const programmeVerticals: ProgrammeVertical[] = [
       },
       {
         title: 'Maker Bharat',
-        copy: 'School makerspaces stocked for low-cost prototyping — 3D printing, sensors and microcontrollers — with a build brief drawn from a local problem.',
+        copy: 'School makerspaces stocked for low-cost prototyping (3D printing, sensors and microcontrollers), with a build brief drawn from a local problem.',
       },
     ],
     image: {
@@ -169,7 +169,7 @@ export const programmeVerticals: ProgrammeVertical[] = [
     id: 'bridge',
     index: '03',
     name: 'BRIDGE',
-    subtitle: 'Society Connect — Every lesson must change something',
+    subtitle: 'Society Connect · Every lesson must change something',
     body: 'Turns classroom learning into documented civic action.',
     intro:
       'BRIDGE is the vertical that refuses to let learning end at the classroom door. Students identify a problem in their own ward, village or district, investigate it with the rigour of a research team, and take a documented case to the people with the power to fix it.',
@@ -180,7 +180,7 @@ export const programmeVerticals: ProgrammeVertical[] = [
       },
       {
         title: 'Civic Watch',
-        copy: 'Students audit a public service in their own ward — a budget line, a water supply, a school repair fund — compile the evidence, and present it to the responsible authority.',
+        copy: 'Students audit a public service in their own ward (a budget line, a water supply, a school repair fund), compile the evidence, and present it to the responsible authority.',
       },
       {
         title: 'Service Semester',
@@ -189,7 +189,7 @@ export const programmeVerticals: ProgrammeVertical[] = [
     ],
     image: {
       id: 'IMG-P-04',
-      spec: 'Students out in their own neighbourhood doing fieldwork — notebooks or phones in hand, street-level, unposed.',
+      spec: 'Students out in their own neighbourhood doing fieldwork: notebooks or phones in hand, street-level, unposed.',
       alt: 'Group Captain Shubhanshu Shukla walking through a village with community members',
       status: 'AVAILABLE',
       src: photos.communityWalk,
@@ -199,22 +199,22 @@ export const programmeVerticals: ProgrammeVertical[] = [
     id: 'cosmos',
     index: '04',
     name: 'COSMOS',
-    subtitle: 'Space & Future Sciences — The Overview Effect, brought back to Earth',
+    subtitle: 'Space & Future Sciences · The Overview Effect, brought back to Earth',
     body: 'Satellite imagery, astronomy and space design as a lens for planetary thinking.',
     intro:
-      'COSMOS uses the wonder of space as a lens for planetary thinking. Real satellite imagery, ISRO connections and speculative design studios help students experience the Overview Effect — and bring it back down to Earth.',
+      'COSMOS uses the wonder of space as a lens for planetary thinking. Real satellite imagery, ISRO connections and speculative design studios help students experience the Overview Effect, and bring it back down to Earth.',
     initiatives: [
       {
         title: 'No Borders from Space',
-        copy: 'An astronomy and earth-observation programme using real satellite imagery to help students see their planet as astronauts do — without borders, without division.',
+        copy: 'An astronomy and earth-observation programme using real satellite imagery to help students see their planet as astronauts do: without borders, without division.',
       },
       {
         title: 'Future Earth Explorers Clubs',
-        copy: 'After-school space science and astrobiology clubs in 500 schools — student-led, with curriculum, competitions, and connections to space research institutions.',
+        copy: 'After-school space science and astrobiology clubs in 500 schools: student-led, with curriculum, competitions, and connections to space research institutions.',
       },
       {
         title: 'Space Experience & Innovation Centres',
-        copy: 'Physical centres — the first in Ladakh — where students work on collaborative innovation projects and connect to a global knowledge exchange.',
+        copy: 'Physical centres, the first in Ladakh, where students work on collaborative innovation projects and connect to a global knowledge exchange.',
       },
     ],
     image: {
@@ -238,7 +238,7 @@ export const fiveYearTargets: StatTarget[] = [
     value: 500,
     suffix: 'K Youth Reached',
     label: '500K Youth Reached',
-    copy: 'Technology-literacy programmes — coding, AI and makerspaces — delivering skills to half a million young people by Year 5.',
+    copy: 'Technology-literacy programmes (coding, AI and makerspaces), delivering skills to half a million young people by Year 5.',
   },
   {
     value: 500,
@@ -268,27 +268,27 @@ export const fiveYearTargets: StatTarget[] = [
 
 export const roadmap = [
   {
-    phase: 'Phase 1 — India Metro Launch',
+    phase: 'Phase 1 · India Metro Launch',
     horizon: 'Years 1–2',
     milestones: [
-      'New Delhi — national HQ and policy advocacy',
-      'Mumbai — CSR, media and fundraising',
-      'Bengaluru — technology vertical',
-      'Pune — education institutions and youth',
+      'New Delhi · national HQ and policy advocacy',
+      'Mumbai · CSR, media and fundraising',
+      'Bengaluru · technology vertical',
+      'Pune · education institutions and youth',
     ],
   },
   {
-    phase: 'Phase 2 — Pan-India + First International',
+    phase: 'Phase 2 · Pan-India + First International',
     horizon: 'Years 3–4',
     milestones: [
       'Five further Indian cities',
-      'Singapore — South-East Asia hub',
-      'United Arab Emirates — diaspora and Gulf schools',
-      'United Kingdom — European outreach',
+      'Singapore · South-East Asia hub',
+      'United Arab Emirates · diaspora and Gulf schools',
+      'United Kingdom · European outreach',
     ],
   },
   {
-    phase: 'Phase 3 — Global Scale',
+    phase: 'Phase 3 · Global Scale',
     horizon: 'Year 5 onwards',
     milestones: [
       '20+ country chapters activated',
@@ -365,10 +365,10 @@ export interface GalleryImage {
 export const galleryDispatches = [
   {
     tag: 'COSMOS',
-    title: 'Outreach — where the wonder of space meets a classroom full of futures',
+    title: 'Outreach: where the wonder of space meets a classroom full of futures',
     date: 'Foundation archive',
     caption:
-      'Group Captain Shubhanshu Shukla addresses students at space-education outreach events, speaks with national media about the mission — one planet, one home, infinite futures — and opens career pathways that once felt impossibly far away.',
+      'Group Captain Shubhanshu Shukla addresses students at space-education outreach events, speaks with national media about the mission (one planet, one home, infinite futures) and opens career pathways that once felt impossibly far away.',
     status: 'AVAILABLE' as ImageStatus,
     images: [
       {
@@ -400,7 +400,7 @@ export const galleryDispatches = [
   },
   {
     tag: 'ORBIT',
-    title: 'Schools & community — the first nodes of a borderless classroom',
+    title: 'Schools & community: the first nodes of a borderless classroom',
     date: 'Foundation archive',
     caption:
       'School visits and village welcomes: every conversation a small step toward a borderless classroom, and every community a partner. Bridge begins where the classroom meets the street.',
@@ -435,10 +435,10 @@ export const galleryDispatches = [
   },
   {
     tag: 'COSMOS',
-    title: 'The Overview — the view that started everything',
+    title: 'The Overview: the view that started everything',
     date: 'Foundation archive',
     caption:
-      'Earth from orbit, photographed during the founder’s mission. From up here, there are no borders — only one beautiful, fragile Earth.',
+      'Earth from orbit, photographed during the founder’s mission. From up here, there are no borders. Only one beautiful, fragile Earth.',
     status: 'AVAILABLE' as ImageStatus,
     images: [
       {
@@ -479,11 +479,11 @@ export const leadershipTiers = [
     copy: 'Chief Executive Officer and Chief Programme Officer, responsible for day-to-day delivery.',
   },
   {
-    tier: 'Director — ORBIT',
+    tier: 'Director · ORBIT',
     copy: 'Leads the planetary-citizenship curriculum and the international school network.',
   },
   {
-    tier: 'Director — NEXUS',
+    tier: 'Director · NEXUS',
     copy: 'Leads technology literacy, makerspaces and the innovation programmes.',
   },
 ];
@@ -491,7 +491,7 @@ export const leadershipTiers = [
 export const complianceCards = [
   {
     title: 'Section 8 Company',
-    copy: 'Incorporated under the Companies Act, 2013 — India’s highest category of non-profit registration, with full fiduciary governance. CIN: [ ].',
+    copy: 'Incorporated under the Companies Act, 2013: India’s highest category of non-profit registration, with full fiduciary governance. CIN: [ ].',
   },
   {
     title: 'India-First, Global Vision',

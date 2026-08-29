@@ -1,4 +1,4 @@
-import { fiveYearTargets, impactStories, photos } from '@/data/content';
+import { assets, fiveYearTargets, impactStories } from '@/data/content';
 import { CounterStat, GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -18,14 +18,14 @@ export default function Impact() {
           </>
         }
         sub="Every number here is a student who thought differently, a community that changed, a border that dissolved a little."
-        image={photos.earthNightCityLights}
-        tone="day"
+        image={assets.starfield}
+        tone="stars"
       >
         <PrimaryLink to="/get-involved">Fund a classroom</PrimaryLink>
         <GhostLink to="/gallery">See field notes</GhostLink>
       </PageHero>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Five-Year Targets"
           title="The Scale We're Building"
@@ -39,7 +39,7 @@ export default function Impact() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Stories of Change"
           title="Impact from the Field"
@@ -51,7 +51,7 @@ export default function Impact() {
               <ImageSlotCard
                 slot={{
                   id: story.image,
-                  spec: 'Foundation archive photograph — story-specific image to follow; guardian consent required before publication.',
+                  spec: 'Foundation archive photograph · story-specific image to follow; guardian consent required before publication.',
                   alt: story.photoAlt,
                   status: 'REPLACE',
                   src: story.photo,
@@ -76,18 +76,20 @@ export default function Impact() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1100px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1100px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading eyebrow="How we measure" title="Plain rules. Public evidence." align="center" />
-        <div className="mt-12 space-y-8 text-center">
+        <div className="mt-14">
           {[
-            'Every Earthizen project produces an artefact — a device, a document, a resolution, a dataset. We publish what worked and what did not.',
-            'Every school partnership is reviewed at the end of each term against outcomes agreed at the start.',
-            'Every funder receives quarterly briefings and an annual audited impact report.',
-            'Where a claim cannot be evidenced, we do not make it.',
-          ].map((line) => (
-            <p key={line} className="mx-auto max-w-4xl font-serif-display text-2xl leading-snug text-[#fffdf5] sm:text-3xl" data-reveal>
-              {line}
-            </p>
+            ['Artefacts, not claims', 'Every Earthizen project produces an artefact: a device, a document, a resolution, a dataset. We publish what worked and what did not.'],
+            ['Term-end reviews', 'Every school partnership is reviewed at the end of each term against outcomes agreed at the start.'],
+            ['Audited reporting', 'Every funder receives quarterly briefings and an annual audited impact report.'],
+            ['Evidence first', 'Where a claim cannot be evidenced, we do not make it.'],
+          ].map(([rule, line], index) => (
+            <div key={rule} className="grid gap-3 border-t hairline py-7 sm:grid-cols-[64px_240px_1fr] sm:items-baseline" data-reveal>
+              <span className="font-display text-2xl font-semibold text-sky-200/50">{String(index + 1).padStart(2, '0')}</span>
+              <h3 className="font-display text-lg font-semibold text-[#fffdf5]">{rule}</h3>
+              <p className="text-base leading-8 text-[#c8d4ea]/[0.78]">{line}</p>
+            </div>
           ))}
         </div>
       </section>

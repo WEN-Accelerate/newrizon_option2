@@ -17,7 +17,7 @@ export default function Programmes() {
             Four Programme <span className="text-gradient-orbit">Verticals</span>
           </>
         }
-        sub="Four interconnected pillars — each distinct, each essential. Together they form a complete education for planetary citizenship."
+        sub="Four interconnected pillars, each distinct, each essential. Together they form a complete education for planetary citizenship."
         image={assets.starfield}
         tone="stars"
       >
@@ -25,7 +25,7 @@ export default function Programmes() {
         <GhostLink to="/impact">See the Evidence</GhostLink>
       </PageHero>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-20 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
           <aside className="lg:sticky lg:top-28 lg:self-start" data-reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.74]">Vertical map</p>
@@ -42,7 +42,7 @@ export default function Programmes() {
             </div>
           </aside>
 
-          <div className="space-y-24">
+          <div className="space-y-28">
             {programmeVerticals.map((vertical, index) => (
               <section key={vertical.id} id={vertical.id} className="scroll-mt-28">
                 <div className={`grid items-start gap-8 ${index % 2 ? 'lg:grid-cols-[0.9fr_1.1fr]' : 'lg:grid-cols-[1.1fr_0.9fr]'}`}>
@@ -74,12 +74,12 @@ export default function Programmes() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 pb-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 pb-28 sm:px-8 lg:px-10">
         <div className="glass-panel rounded-[2rem] p-8 text-center sm:p-12" data-reveal>
           <SectionHeading
             eyebrow="Build with us"
             title="Every vertical needs schools, funders and mentors."
-            sub="Bring one pillar into a classroom — or help launch the whole constellation."
+            sub="Bring one pillar into a classroom, or help launch the whole constellation."
             align="center"
           />
           <div className="mt-8 flex flex-wrap justify-center gap-3">

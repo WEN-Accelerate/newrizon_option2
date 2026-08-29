@@ -1,5 +1,5 @@
-import { assets, involvementDoors, photos } from '@/data/content';
-import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
+import { assets, involvementDoors } from '@/data/content';
+import { GhostLink, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
 
@@ -41,15 +41,15 @@ export default function GetInvolved() {
             Four ways <span className="text-gradient-orbit">in.</span>
           </>
         }
-        sub="Whether you run a school, a CSR budget, or just have a Saturday — there is a way to build this."
-        image={photos.studentsGroup}
-        tone="day"
+        sub="Whether you run a school, a CSR budget, or just have a Saturday, there is a way to build this."
+        image={assets.starfield}
+        tone="stars"
       >
         <PrimaryLink to="/contact">Talk to us</PrimaryLink>
         <GhostLink to="/programmes">See the programmes</GhostLink>
       </PageHero>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {involvementDoors.map((door, index) => (
             <article key={door.title} className="group relative overflow-hidden rounded-[1.8rem] border hairline bg-white/[0.035] p-7 transition hover:-translate-y-2 hover:bg-white/[0.06]" data-reveal>
@@ -61,22 +61,9 @@ export default function GetInvolved() {
             </article>
           ))}
         </div>
-        <div className="mt-10">
-          <ImageSlotCard
-            slot={{
-              id: 'IMG-N-01',
-              spec: 'Page hero, 21:9. A wide shot of a full classroom mid-activity — many students, visible energy.',
-              alt: 'A classroom full of students with Group Captain Shubhanshu Shukla during a school outreach session',
-              status: 'AVAILABLE',
-              src: photos.schoolVisit,
-            }}
-            ratio="aspect-[21/9]"
-            className="rounded-[2rem]"
-          />
-        </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-28">
         <div className="absolute inset-0">
           <img src={assets.orbitalSunrise} alt="" data-parallax={0.14} className="h-full w-full scale-110 object-cover opacity-28" />
           <div className="absolute inset-0 bg-[#05060f]/[0.78]" />
@@ -85,7 +72,7 @@ export default function GetInvolved() {
           <SectionHeading
             eyebrow="CSR & Funding"
             title="Fund a classroom. Measure the change."
-            sub="Earthizen partnerships are scoped, costed and reported like any other line in your budget — because that is what makes them defensible."
+            sub="Earthizen partnerships are scoped, costed and reported like any other line in your budget, because that is what makes them defensible."
           />
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {partnershipTiers.map((tier) => (
@@ -124,19 +111,6 @@ export default function GetInvolved() {
                 <GhostLink to="/impact">Review evidence</GhostLink>
               </div>
             </div>
-          </div>
-          <div className="mt-10">
-            <ImageSlotCard
-              slot={{
-                id: 'IMG-N-02',
-                spec: 'Page hero, 21:9. Evidence-led: a student demonstrating a working build to an adult visitor.',
-                alt: 'A student demonstrating a working wearable-device prototype at an innovation showcase',
-                status: 'AVAILABLE',
-                src: photos.studentInnovation,
-              }}
-              ratio="aspect-[21/9]"
-              className="rounded-[2rem]"
-            />
           </div>
         </div>
       </section>

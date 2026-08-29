@@ -25,13 +25,10 @@ export function ScrollToTop() {
 function Wordmark() {
   return (
     <Link to="/" className="group flex items-center gap-3" aria-label="Earthizen Foundation home">
-      <span className="relative grid h-11 w-11 place-items-center rounded-full border border-sky-200/30 bg-sky-300/10 shadow-[0_0_28px_rgba(56,189,248,0.22)]">
-        <span className="absolute inset-1 rounded-full border border-violet-300/30 orbit-ring" />
-        <span className="h-3.5 w-3.5 rounded-full bg-gradient-to-br from-sky-300 via-violet-400 to-amber-300" />
-      </span>
+      <img src="/images/brand/earthizen-mark-white.png" alt="" className="h-9 w-auto select-none" />
       <span className="leading-none">
-        <span className="block font-mono text-[10px] uppercase tracking-[0.42em] text-sky-100/70">Earthizen</span>
-        <span className="mt-1 block font-display text-sm font-semibold uppercase tracking-[0.22em] text-[#f1e9dd]">Foundation</span>
+        <span className="block font-display text-base font-bold uppercase tracking-[0.3em] text-[#f1e9dd]">Earthizen</span>
+        <span className="mt-1 block font-mono text-[9px] uppercase tracking-[0.42em] text-sky-100/60">Foundation</span>
       </span>
     </Link>
   );
@@ -132,7 +129,6 @@ export function PageEndBand() {
             Join As An Earthizen
           </Link>
         </div>
-        <p className="relative mt-8 font-mono text-[10px] uppercase tracking-[0.3em] text-[#c8d4ea]/[0.52]">IMG-X-04 · page-end band placeholder · TO COMMISSION</p>
       </div>
     </section>
   );
@@ -143,9 +139,9 @@ export function Footer() {
     <footer className="relative z-10 border-t hairline bg-[#04050c]/90">
       <div className="mx-auto grid max-w-[1500px] gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.2fr_0.8fr_1fr] lg:px-10">
         <div>
-          <Wordmark />
+          <img src="/images/brand/earthizen-logo-white.png" alt="Earthizen" className="h-24 w-auto select-none" />
           <p className="mt-6 max-w-md text-sm leading-7 text-[#c8d4ea]/[0.72]">
-            EARTHIZEN FOUNDATION — Section 8 Company · India-First, Global Vision. From space, there are no borders — only one beautiful, fragile Earth.
+            EARTHIZEN FOUNDATION · Section 8 Company · India-First, Global Vision. From space, there are no borders. Only one beautiful, fragile Earth.
           </p>
           <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.24em] text-[#c8d4ea]/[0.48]">
             CIN [ ] · CSR-1 [ ] · 12A [ ] · 80G [ ]

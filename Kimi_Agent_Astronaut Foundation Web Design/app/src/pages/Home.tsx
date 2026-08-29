@@ -20,7 +20,7 @@ export default function Home() {
             <br /> Infinite Futures.
           </>
         }
-        sub="From space, there are no borders — only one beautiful, fragile Earth. We build the classrooms that teach children to see it that way, and the tools to act on it."
+        sub="From space, there are no borders. Only one beautiful, fragile Earth. We build the classrooms that teach children to see it that way, and the tools to act on it."
         image={photos.earthNight}
         showCraft
       >
@@ -28,22 +28,22 @@ export default function Home() {
         <GhostLink to="/programmes">See the Programmes</GhostLink>
       </PageHero>
 
-      <section className="relative mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="relative mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="grid gap-6 lg:grid-cols-2">
           <article className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-violet-500/20 blur-3xl" />
-            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 1 — Vision</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 1 · Vision</p>
             <p className="mt-6 font-serif-display text-3xl leading-tight text-[#fffdf5] sm:text-4xl">{visionMission.vision}</p>
           </article>
           <article className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
             <div className="absolute -left-16 -bottom-16 h-48 w-48 rounded-full bg-sky-400/20 blur-3xl" />
-            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 2 — Mission</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 2 · Mission</p>
             <p className="mt-6 text-lg leading-9 text-[#e6e6e1]/[0.84]">{visionMission.mission}</p>
           </article>
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-28">
         <div className="absolute inset-0">
           <img src={assets.earthDay} alt="" data-parallax={0.14} className="h-full w-full scale-110 object-cover opacity-22" />
           <div className="absolute inset-0 bg-[#05060f]/[0.72]" />
@@ -52,7 +52,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="5 Core Values"
             title="The values that orbit every classroom."
-            sub="From space, there are no borders — only one beautiful, fragile Earth."
+            sub="From space, there are no borders. Only one beautiful, fragile Earth."
             align="center"
           />
           <div className="mt-14 grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
@@ -70,12 +70,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
             eyebrow="Our Programme Verticals"
             title="Four pillars. One planetary classroom."
-            sub="Four interconnected pillars — each distinct, each essential. Together they form a complete education for planetary citizenship."
+            sub="Four interconnected pillars, each distinct, each essential. Together they form a complete education for planetary citizenship."
           />
           <GhostLink to="/programmes">Open Programmes</GhostLink>
         </div>
@@ -96,11 +96,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Five-Year Targets"
           title="Ambitious goals. Measurable impact. One Earth at a time."
-          sub="This is what we are building towards — stated openly, so we can be held to it."
+          sub="This is what we are building towards, stated openly, so we can be held to it."
           align="center"
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -110,7 +110,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-28">
         <div className="absolute inset-0">
           <img src={photos.orbitalSunriseArrays} alt="" data-parallax={0.16} className="h-full w-full scale-110 object-cover opacity-42" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#05060f] via-[#05060f]/[0.58] to-[#05060f]" />
@@ -118,7 +118,6 @@ export default function Home() {
         <div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-10">
           <SectionHeading eyebrow="Expansion Roadmap" title="A launch sequence for a borderless movement." />
           <div className="relative mt-14">
-            <img src={assets.spacecraft} alt="" className="float-slower absolute -top-20 left-[6%] hidden w-52 opacity-90 lg:block" data-parallax={-0.06} />
             <div className="grid gap-5 lg:grid-cols-3">
               {roadmap.map((phase, index) => (
                 <article key={phase.phase} className="glass-panel relative overflow-hidden rounded-[1.8rem] p-7" data-reveal>
@@ -140,7 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-5xl text-center" data-reveal>
           <Tag>Closing transmission</Tag>
           <p className="mt-8 font-serif-display text-4xl leading-tight text-[#fffdf5] sm:text-5xl lg:text-6xl">{closingQuote}</p>

@@ -10,13 +10,13 @@ import GetInvolved from '@/pages/GetInvolved';
 import Contact from '@/pages/Contact';
 
 const pageTitles: Record<string, string> = {
-  '/': 'Earthizen Foundation — No Borders. One Earth. Infinite Futures.',
-  '/programmes': 'Programmes — Earthizen Foundation',
-  '/impact': 'Impact — Earthizen Foundation',
-  '/about': 'About — Earthizen Foundation',
-  '/gallery': 'Gallery — Earthizen Foundation',
-  '/get-involved': 'Get Involved — Earthizen Foundation',
-  '/contact': 'Contact — Earthizen Foundation',
+  '/': 'Earthizen Foundation · No Borders. One Earth. Infinite Futures.',
+  '/programmes': 'Programmes · Earthizen Foundation',
+  '/impact': 'Impact · Earthizen Foundation',
+  '/about': 'About · Earthizen Foundation',
+  '/gallery': 'Gallery · Earthizen Foundation',
+  '/get-involved': 'Get Involved · Earthizen Foundation',
+  '/contact': 'Contact · Earthizen Foundation',
 };
 
 function DocumentTitle() {
@@ -27,7 +27,7 @@ function DocumentTitle() {
     document.documentElement.lang = 'en';
     const metaDescription = document.querySelector<HTMLMetaElement>('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.content = 'Earthizen Foundation — planetary citizenship education inspired by the astronaut view of Earth.';
+      metaDescription.content = 'Earthizen Foundation: planetary citizenship education inspired by the astronaut view of Earth.';
     }
   }, [pathname]);
 

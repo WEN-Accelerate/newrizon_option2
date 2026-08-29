@@ -26,12 +26,19 @@ export default function About() {
         <GhostLink to="/get-involved">Join the movement</GhostLink>
       </PageHero>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="relative" data-reveal>
-            <div className="absolute -left-10 top-10 h-44 w-44 rounded-full bg-violet-500/20 blur-3xl" />
-            <img src={assets.astronaut} alt="Astronaut placeholder graphic" className="float-slow relative mx-auto w-full max-w-[430px] drop-shadow-[0_0_60px_rgba(134,66,255,0.35)]" />
-          </div>
+          <ImageSlotCard
+            slot={{
+              id: 'IMG-A-02',
+              spec: 'Portrait, 4:3. Existing portrait against a dark background, flight suit, three-quarter turn.',
+              alt: 'Group Captain Shubhanshu Shukla, official mission portrait in flight suit',
+              status: 'AVAILABLE',
+              src: founderQuote.portrait,
+            }}
+            ratio="aspect-[4/3]"
+            className="rounded-[2rem]"
+          />
           <figure className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-12" data-reveal>
             <Tag>Founding quote</Tag>
             <blockquote className="mt-8 font-serif-display text-4xl leading-tight text-[#fffdf5] sm:text-5xl">
@@ -43,22 +50,9 @@ export default function About() {
             </figcaption>
           </figure>
         </div>
-        <div className="mt-8">
-          <ImageSlotCard
-            slot={{
-              id: 'IMG-A-02',
-              spec: 'Portrait, 4:3. Existing portrait against a dark background, flight suit, three-quarter turn.',
-              alt: 'Group Captain Shubhanshu Shukla — official mission portrait in flight suit',
-              status: 'AVAILABLE',
-              src: founderQuote.portrait,
-            }}
-            ratio="aspect-[4/3]"
-            className="mx-auto max-w-3xl rounded-[2rem]"
-          />
-        </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeading eyebrow="How it started" title="The origin story" />
@@ -82,7 +76,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading eyebrow="What we are for" title="Vision & Mission" align="center" />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <article className="rounded-[2rem] border hairline bg-white/[0.035] p-8" data-reveal>
@@ -96,7 +90,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="The people behind"
           title="The team and Leadership"
@@ -119,7 +113,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading eyebrow="Legal & Registration" title="Registered & Compliant" align="center" />
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {complianceCards.map((card) => (

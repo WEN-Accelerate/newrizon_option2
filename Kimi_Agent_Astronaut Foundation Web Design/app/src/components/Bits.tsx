@@ -19,7 +19,7 @@ export function SectionHeading({
   return (
     <div className={`${align === 'center' ? 'mx-auto text-center' : ''} max-w-4xl`} data-reveal>
       <p className="font-mono text-[11px] uppercase tracking-[0.36em] text-sky-200/[0.78]">■ {eyebrow}</p>
-      <h2 className="mt-4 font-display text-4xl font-semibold tracking-[-0.04em] text-[#fffdf5] sm:text-5xl lg:text-6xl">
+      <h2 className="mt-4 font-display text-4xl font-semibold tracking-[-0.02em] text-[#fffdf5] sm:text-5xl">
         {title}
       </h2>
       {sub && <p className="mt-5 max-w-2xl text-base leading-8 text-[#c8d4ea]/[0.72] sm:text-lg">{sub}</p>}
@@ -78,33 +78,25 @@ export function PageHero({
         <img
           src={image}
           alt=""
-          data-parallax={tone === 'day' ? 0.12 : 0.2}
-          className="h-full w-full scale-110 object-cover opacity-88"
+          data-parallax={tone === 'day' ? 0.08 : 0.12}
+          className="h-full w-full scale-105 object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(134,66,255,0.28),transparent_28rem)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(134,66,255,0.22),transparent_28rem)]" />
       </div>
-      <div className="blueprint-grid absolute inset-0 opacity-40" />
+      <div className="blueprint-grid absolute inset-0 opacity-30" />
       {showCraft && (
-        <>
-          <img
-            src={assets.astronaut}
-            alt="Stylised astronaut placeholder graphic"
-            className="float-slow absolute right-[7%] top-[18%] hidden w-56 select-none drop-shadow-[0_0_42px_rgba(134,66,255,0.35)] md:block lg:w-72"
-            data-parallax={-0.08}
-          />
-          <img
-            src={assets.spacecraft}
-            alt="Stylised spacecraft placeholder graphic"
-            className="float-slower absolute bottom-[18%] right-[16%] hidden w-72 select-none drop-shadow-[0_0_42px_rgba(56,189,248,0.32)] lg:block"
-            data-parallax={0.1}
-          />
-        </>
+        <img
+          src={assets.astronaut}
+          alt="Stylised astronaut graphic"
+          className="float-slow absolute right-[8%] top-[22%] hidden w-52 select-none drop-shadow-[0_0_42px_rgba(134,66,255,0.35)] md:block lg:w-64"
+          data-parallax={-0.08}
+        />
       )}
       <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-20 sm:px-8 lg:px-10">
         <p data-page-intro className="font-mono text-[11px] uppercase tracking-[0.42em] text-sky-200/[0.82]">
           {eyebrow}
         </p>
-        <h1 data-page-intro className="mt-5 max-w-6xl text-balance font-display text-6xl font-semibold leading-[0.88] tracking-[-0.07em] text-[#fffdf5] sm:text-7xl lg:text-8xl xl:text-9xl">
+        <h1 data-page-intro className="mt-5 max-w-6xl text-balance font-display text-5xl font-semibold leading-[0.96] tracking-[-0.03em] text-[#fffdf5] sm:text-6xl lg:text-7xl xl:text-8xl">
           {title}
         </h1>
         <p data-page-intro className="mt-7 max-w-2xl text-lg leading-8 text-[#e6e6e1]/[0.82] sm:text-xl">

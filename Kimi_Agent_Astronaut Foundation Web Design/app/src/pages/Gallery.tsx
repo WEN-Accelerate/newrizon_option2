@@ -4,11 +4,11 @@ import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
 
 const dispatchRules = [
-  ['Vertical tag', 'ORBIT / NEXUS / BRIDGE / COSMOS — one only'],
+  ['Vertical tag', 'ORBIT / NEXUS / BRIDGE / COSMOS · one only'],
   ['Title', 'Place-led, not programme-led'],
   ['Date', 'Month and year, always visible'],
   ['Caption', 'Two sentences maximum: what is happening, and why it mattered'],
-  ['Images', 'Three to six per dispatch. Distinct assets — never reused across dispatches.'],
+  ['Images', 'Three to six per dispatch. Distinct assets; never reused across dispatches.'],
   ['Alt text', 'Required field, cannot be saved empty. Describe the action, not the composition.'],
   ['Credit', 'Photographer name and consent status recorded against every image'],
 ];
@@ -27,7 +27,7 @@ export default function Gallery() {
             Moments from the <span className="text-gradient-orbit">Movement</span>
           </>
         }
-        sub="From classrooms in Dharavi to satellite labs in Ladakh — every photograph is a step toward a borderless world."
+        sub="From classrooms in Dharavi to satellite labs in Ladakh: every photograph is a step toward a borderless world."
         image={assets.starfield}
         tone="stars"
       >
@@ -35,7 +35,7 @@ export default function Gallery() {
         <GhostLink to="/impact">Read impact stories</GhostLink>
       </PageHero>
 
-      <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Dispatch template"
           title="One record. Infinite field notes."
@@ -51,7 +51,7 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1500px] space-y-20 px-5 pb-24 sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-[1500px] space-y-20 px-5 pb-28 sm:px-8 lg:px-10">
         {galleryDispatches.map((dispatch) => (
           <article key={dispatch.title} className="rounded-[2.2rem] border hairline bg-white/[0.03] p-5 sm:p-8" data-reveal>
             <div className="flex flex-wrap items-start justify-between gap-5">
@@ -72,7 +72,7 @@ export default function Gallery() {
               <ImageSlotCard
                 slot={{
                   id: dispatch.images[0].id,
-                  spec: 'Lead dispatch image — foundation archive photograph.',
+                  spec: 'Lead dispatch image · foundation archive photograph.',
                   alt: dispatch.images[0].alt,
                   status: dispatch.status,
                   src: dispatch.images[0].src,
@@ -86,7 +86,7 @@ export default function Gallery() {
                     key={image.id}
                     slot={{
                       id: image.id,
-                      spec: 'Supporting dispatch image — foundation archive photograph.',
+                      spec: 'Supporting dispatch image · foundation archive photograph.',
                       alt: image.alt,
                       status: dispatch.status,
                       src: image.src,
