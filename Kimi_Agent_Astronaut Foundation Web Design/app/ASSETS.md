@@ -49,3 +49,24 @@ version of a newrizon photo, that version was used.
   until real names, roles and cleared photographs are supplied.
 - The stylised astronaut / spacecraft / starfield graphics in
   `public/images/` are design elements and were kept.
+
+## Update: supplied image pack (images.zip)
+
+New assets provided by the foundation, added alongside the originals:
+
+**Archive photos** (`public/images/photos/`): `founder-blue-suit.jpg` (About
+founding-quote portrait), and the five gallery photos
+`gallery-village-walk / gallery-podium-wide / gallery-leaders-meeting /
+gallery-students-award / gallery-stage-felicitation` (Gallery dispatch
+IMG-G-02…06, replacing the previous first two dispatches).
+
+**Purpose-made visuals** (`public/images/visuals/`): `vertical-orbit / nexus /
+bridge / cosmos` (programme cards on Home and Programmes),
+`story-dharavi-lab / story-civic-budget / story-water-sensor` (Impact stories
+IMG-I-02/03/05, status AVAILABLE), `vision-telescope` and
+`mission-collaboration` (Home vision & mission cards), `about-board`
+(About leadership banner, marked as illustrative).
+
+Unused from the pack (available in the zip if needed later): value_* cards,
+portrait-orientation heroes, earth_cities_*, space_iss, space_sunflare,
+rocket_space, astronaut_floating, new_impact.

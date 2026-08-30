@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { assets, closingQuote, coreValues, fiveYearTargets, photos, programmeVerticals, roadmap, visionMission } from '@/data/content';
+import { assets, closingQuote, coreValues, fiveYearTargets, photos, programmeVerticals, roadmap, visionMission, visuals } from '@/data/content';
 import { CounterStat, GhostLink, ImageSlotCard, OrbitDial, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -30,15 +30,27 @@ export default function Home() {
 
       <section className="relative mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
+          <article className="glass-panel relative flex flex-col overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-violet-500/20 blur-3xl" />
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 1 · Vision</p>
-            <p className="mt-6 font-serif-display text-3xl leading-tight text-[#fffdf5] sm:text-4xl">{visionMission.vision}</p>
+            <p className="mt-6 flex-1 font-serif-display text-3xl leading-tight text-[#fffdf5] sm:text-4xl">{visionMission.vision}</p>
+            <img
+              src={visuals.visionTelescope}
+              alt="Stargazer at a telescope beneath the Milky Way"
+              className="mt-8 aspect-[16/7] w-full rounded-[1.4rem] object-cover"
+              loading="lazy"
+            />
           </article>
-          <article className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
+          <article className="glass-panel relative flex flex-col overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
             <div className="absolute -left-16 -bottom-16 h-48 w-48 rounded-full bg-sky-400/20 blur-3xl" />
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 2 · Mission</p>
-            <p className="mt-6 text-lg leading-9 text-[#e6e6e1]/[0.84]">{visionMission.mission}</p>
+            <p className="mt-6 flex-1 text-lg leading-9 text-[#e6e6e1]/[0.84]">{visionMission.mission}</p>
+            <img
+              src={visuals.missionCollaboration}
+              alt="Students collaborating around a holographic globe in a maker lab"
+              className="mt-8 aspect-[16/7] w-full rounded-[1.4rem] object-cover"
+              loading="lazy"
+            />
           </article>
         </div>
       </section>

@@ -51,9 +51,12 @@ export default function Impact() {
               <ImageSlotCard
                 slot={{
                   id: story.image,
-                  spec: 'Foundation archive photograph · story-specific image to follow; guardian consent required before publication.',
+                  spec:
+                    story.photoStatus === 'AVAILABLE'
+                      ? 'Story visual supplied by the foundation.'
+                      : 'Foundation archive photograph · story-specific image to follow; guardian consent required before publication.',
                   alt: story.photoAlt,
-                  status: 'REPLACE',
+                  status: story.photoStatus,
                   src: story.photo,
                 }}
                 ratio="aspect-[4/3]"

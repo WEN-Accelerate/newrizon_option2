@@ -59,6 +59,29 @@ export const photos = {
   earthNight: '/images/photos/earth-night.jpg',
   earthNightCityLights: '/images/photos/earth-night-city-lights.jpg',
   orbitalSunriseArrays: '/images/photos/orbital-sunrise-arrays.jpg',
+  founderBlueSuit: '/images/photos/founder-blue-suit.jpg',
+  galleryVillageWalk: '/images/photos/gallery-village-walk.jpg',
+  galleryPodiumWide: '/images/photos/gallery-podium-wide.jpg',
+  galleryLeadersMeeting: '/images/photos/gallery-leaders-meeting.jpg',
+  galleryStudentsAward: '/images/photos/gallery-students-award.jpg',
+  galleryStageFelicitation: '/images/photos/gallery-stage-felicitation.jpg',
+};
+
+/**
+ * Purpose-made visuals supplied by the foundation: illustrative artwork and
+ * staged story imagery, distinct from the archive photography above.
+ */
+export const visuals = {
+  verticalOrbit: '/images/visuals/vertical-orbit.jpg',
+  verticalNexus: '/images/visuals/vertical-nexus.jpg',
+  verticalBridge: '/images/visuals/vertical-bridge.jpg',
+  verticalCosmos: '/images/visuals/vertical-cosmos.jpg',
+  storyDharaviLab: '/images/visuals/story-dharavi-lab.jpg',
+  storyCivicBudget: '/images/visuals/story-civic-budget.jpg',
+  storyWaterSensor: '/images/visuals/story-water-sensor.jpg',
+  visionTelescope: '/images/visuals/vision-telescope.jpg',
+  missionCollaboration: '/images/visuals/mission-collaboration.jpg',
+  aboutBoard: '/images/visuals/about-board.jpg',
 };
 
 export const navLinks = [
@@ -130,9 +153,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-02',
       spec: 'Classroom exchange in progress: partner school on a projected screen, local students turned toward it, someone mid-sentence.',
-      alt: 'Group Captain Shubhanshu Shukla with students at a school outreach visit',
+      alt: 'ORBIT visual: children around a glowing globe linked to the Borderless Classroom Network',
       status: 'AVAILABLE',
-      src: photos.schoolVisit,
+      src: visuals.verticalOrbit,
     },
   },
   {
@@ -160,9 +183,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-03',
       spec: 'School makerspace mid-session: 3D printer running, components on the bench, students working on the same build.',
-      alt: 'Group Captain Shubhanshu Shukla unveiling a space-careers programme with students and educators',
+      alt: 'NEXUS visual: a maker lab with code, innovate, build and impact stages',
       status: 'AVAILABLE',
-      src: photos.eventUnveiling,
+      src: visuals.verticalNexus,
     },
   },
   {
@@ -190,9 +213,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-04',
       spec: 'Students out in their own neighbourhood doing fieldwork: notebooks or phones in hand, street-level, unposed.',
-      alt: 'Group Captain Shubhanshu Shukla walking through a village with community members',
+      alt: 'BRIDGE visual: village students learning together, connected to their community',
       status: 'AVAILABLE',
-      src: photos.communityWalk,
+      src: visuals.verticalBridge,
     },
   },
   {
@@ -220,9 +243,9 @@ export const programmeVerticals: ProgrammeVertical[] = [
     image: {
       id: 'IMG-P-05',
       spec: 'A student at a telescope eyepiece at dusk, or a group reading satellite imagery of their own district on a screen.',
-      alt: 'Students and teachers with Group Captain Shubhanshu Shukla in a school courtyard',
+      alt: 'COSMOS visual: students stargazing with a telescope under the Milky Way',
       status: 'AVAILABLE',
-      src: photos.studentsGroup,
+      src: visuals.verticalCosmos,
     },
   },
 ];
@@ -306,8 +329,9 @@ export const impactStories = [
     body: 'AI, coding and data-literacy bootcamps for underserved youth: six-week intensive programmes with certified learning pathways and mentorship.',
     credit: 'Dharavi, Mumbai · 2024',
     image: 'IMG-I-02',
-    photo: photos.classroomChildren,
-    photoAlt: 'Group Captain Shubhanshu Shukla with young students in their classroom',
+    photo: visuals.storyDharaviLab,
+    photoAlt: 'Young coders at work on laptops in the Dharavi Tech Innovation Lab',
+    photoStatus: 'AVAILABLE' as ImageStatus,
   },
   {
     tag: 'BRIDGE · Civic Budget Watch',
@@ -315,8 +339,9 @@ export const impactStories = [
     body: 'Students in Delhi identified significant underspending in their ward’s school repair budget, compiled a documented case, and presented it at a ward committee meeting.',
     credit: 'Delhi · 2024',
     image: 'IMG-I-03',
-    photo: photos.leadersMeeting,
-    photoAlt: 'Group Captain Shubhanshu Shukla in conversation with community and institutional leaders',
+    photo: visuals.storyCivicBudget,
+    photoAlt: 'Students presenting their school repair budget audit at a ward committee meeting',
+    photoStatus: 'AVAILABLE' as ImageStatus,
   },
   {
     tag: 'ORBIT · Global Assembly',
@@ -326,6 +351,7 @@ export const impactStories = [
     image: 'IMG-I-04',
     photo: photos.studentsGroup,
     photoAlt: 'Students and teachers gathered with Group Captain Shubhanshu Shukla in a school courtyard',
+    photoStatus: 'REPLACE' as ImageStatus,
   },
   {
     tag: 'NEXUS · Maker Bharat',
@@ -333,8 +359,9 @@ export const impactStories = [
     body: 'Class 7 students in Rajkot 3D-printed a low-cost water-quality sensor, deployed it in their local borewell, and set it to alert parents by SMS.',
     credit: 'Rajkot, Gujarat · 2024',
     image: 'IMG-I-05',
-    photo: photos.studentInnovation,
-    photoAlt: 'A school student demonstrating a wearable device prototype at an innovation showcase',
+    photo: visuals.storyWaterSensor,
+    photoAlt: 'Students field-testing their water-quality sensor beside a village pond',
+    photoStatus: 'AVAILABLE' as ImageStatus,
   },
   {
     tag: 'COSMOS · Future Earth Explorers',
@@ -344,6 +371,7 @@ export const impactStories = [
     image: 'IMG-I-06',
     photo: photos.podiumAddress,
     photoAlt: 'Group Captain Shubhanshu Shukla addressing students at a space-education outreach event',
+    photoStatus: 'REPLACE' as ImageStatus,
   },
   {
     tag: 'NEXUS · Tech Society',
@@ -353,6 +381,7 @@ export const impactStories = [
     image: 'IMG-I-07',
     photo: photos.felicitation,
     photoAlt: 'Group Captain Shubhanshu Shukla being felicitated on stage at an education event',
+    photoStatus: 'REPLACE' as ImageStatus,
   },
 ];
 
@@ -364,72 +393,37 @@ export interface GalleryImage {
 
 export const galleryDispatches = [
   {
-    tag: 'COSMOS',
-    title: 'Outreach: where the wonder of space meets a classroom full of futures',
+    tag: 'ORBIT',
+    title: 'Outreach & community: field notes from the movement',
     date: 'Foundation archive',
     caption:
-      'Group Captain Shubhanshu Shukla addresses students at space-education outreach events, speaks with national media about the mission (one planet, one home, infinite futures) and opens career pathways that once felt impossibly far away.',
+      'School visits, village welcomes, media interactions and student awards: every conversation a small step toward a borderless classroom, and every community a partner in the mission (one planet, one home, infinite futures).',
     status: 'AVAILABLE' as ImageStatus,
     images: [
       {
         id: 'IMG-G-02',
-        src: photos.pressInteraction,
-        alt: 'Group Captain Shubhanshu Shukla speaking with national media about the mission',
+        src: photos.galleryVillageWalk,
+        alt: 'A community welcome during a village visit, with traditional drums',
       },
       {
         id: 'IMG-G-03',
-        src: photos.podiumAddress,
+        src: photos.galleryPodiumWide,
         alt: 'Addressing students from the podium at a space-education outreach event',
       },
       {
         id: 'IMG-G-04',
-        src: photos.eventUnveiling,
-        alt: 'Unveiling a space-careers programme with students and educators',
+        src: photos.galleryLeadersMeeting,
+        alt: 'In conversation with community and institutional leaders',
       },
       {
         id: 'IMG-G-05',
-        src: photos.sharingSpacePhotos,
-        alt: 'Sharing photographs from orbit with reporters after the mission',
+        src: photos.galleryStudentsAward,
+        alt: 'Students receiving a certificate and trophy with Group Captain Shubhanshu Shukla',
       },
       {
         id: 'IMG-G-06',
-        src: photos.felicitation,
+        src: photos.galleryStageFelicitation,
         alt: 'Felicitated on stage at a space-education event',
-      },
-    ] as GalleryImage[],
-  },
-  {
-    tag: 'ORBIT',
-    title: 'Schools & community: the first nodes of a borderless classroom',
-    date: 'Foundation archive',
-    caption:
-      'School visits and village welcomes: every conversation a small step toward a borderless classroom, and every community a partner. Bridge begins where the classroom meets the street.',
-    status: 'AVAILABLE' as ImageStatus,
-    images: [
-      {
-        id: 'IMG-G-07',
-        src: photos.schoolVisit,
-        alt: 'Students meet Group Captain Shubhanshu Shukla during a school visit',
-      },
-      {
-        id: 'IMG-G-08',
-        src: photos.studentsGroup,
-        alt: 'Students and teachers with the founder after a school session',
-      },
-      {
-        id: 'IMG-G-09',
-        src: photos.communityWalk,
-        alt: 'A community welcome during a village visit, with traditional drums',
-      },
-      {
-        id: 'IMG-G-10',
-        src: photos.welcomeCeremony,
-        alt: 'A traditional welcome from community members during a village visit',
-      },
-      {
-        id: 'IMG-G-11',
-        src: photos.classroomChildren,
-        alt: 'With young students in their classroom during a school outreach visit',
       },
     ] as GalleryImage[],
   },
@@ -540,5 +534,5 @@ export const founderQuote = {
   attribution: 'Group Captain Shubhanshu Shukla',
   quote: '“I was on a space mission. I looked down at Earth. I could not see any borders. Only one planet. Only one home.”',
   relationship: 'Founder, Earthizen Foundation',
-  portrait: photos.founderPortrait,
+  portrait: photos.founderBlueSuit,
 };

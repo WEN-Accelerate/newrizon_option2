@@ -1,4 +1,4 @@
-import { assets, complianceCards, founderQuote, leadershipTiers, photos, visionMission } from '@/data/content';
+import { assets, complianceCards, founderQuote, leadershipTiers, photos, visionMission, visuals } from '@/data/content';
 import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -31,13 +31,13 @@ export default function About() {
           <ImageSlotCard
             slot={{
               id: 'IMG-A-02',
-              spec: 'Portrait, 4:3. Existing portrait against a dark background, flight suit, three-quarter turn.',
-              alt: 'Group Captain Shubhanshu Shukla, official mission portrait in flight suit',
+              spec: 'Portrait. Official portrait in the blue flight suit, direct gaze.',
+              alt: 'Group Captain Shubhanshu Shukla, official portrait in his blue flight suit',
               status: 'AVAILABLE',
               src: founderQuote.portrait,
             }}
-            ratio="aspect-[4/3]"
-            className="rounded-[2rem]"
+            ratio="aspect-[5/6]"
+            className="mx-auto w-full max-w-[460px] rounded-[2rem]"
           />
           <figure className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-12" data-reveal>
             <Tag>Founding quote</Tag>
@@ -96,7 +96,20 @@ export default function About() {
           title="The team and Leadership"
           sub="Five portrait slots are intentionally held until real names, roles and photographs are cleared."
         />
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-12">
+          <ImageSlotCard
+            slot={{
+              id: 'IMG-A-09',
+              spec: 'Illustrative visual supplied by the foundation; real board photography to follow.',
+              alt: 'Illustration: the Earthizen leadership table with a holographic Earth at its centre',
+              status: 'AVAILABLE',
+              src: visuals.aboutBoard,
+            }}
+            ratio="aspect-[21/9]"
+            className="rounded-[2rem]"
+          />
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
           {leadershipTiers.map((leader, index) => (
             <article key={leader.tier} className="rounded-[1.6rem] border hairline bg-white/[0.035] p-5" data-reveal>
               <div className="image-slot grid aspect-square place-items-center rounded-[1.2rem] p-4 text-center">
