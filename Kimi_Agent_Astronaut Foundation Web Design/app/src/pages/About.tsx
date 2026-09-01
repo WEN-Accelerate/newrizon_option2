@@ -76,8 +76,8 @@ export default function About() {
               status: 'AVAILABLE',
               src: photos.classroomChildren,
             }}
-            ratio="aspect-[3/2]"
-            className="rounded-[2rem]"
+            ratio="aspect-[3/2] lg:aspect-auto"
+            className="rounded-[2rem] lg:h-full"
           />
         </div>
       </section>
