@@ -459,33 +459,56 @@ export const galleryDispatches = [
   },
 ];
 
-export const leadershipTiers = [
+export interface BoardMember {
+  name: string;
+  role: string;
+  title: string;
+  bio: string;
+  photo: string;
+}
+
+export const boardMembers: BoardMember[] = [
   {
-    tier: 'Board of Trustees',
-    copy: 'The supreme governing body, accountable for fiduciary oversight and strategic direction.',
+    name: 'Group Captain Shubhanshu Shukla',
+    role: 'Advisor',
+    title: 'Astronaut, Indian Air Force',
+    bio: 'First Indian astronaut to fly to the ISS; guides the foundation with his vision, expertise and global network.',
+    photo: '/images/people/shubhanshu-shukla.jpg',
   },
   {
-    tier: 'Global Advisory Board',
-    copy: 'Astronauts, scientists and policy leaders who shape the Foundation’s scientific and diplomatic direction.',
+    name: 'Eytan Stibbe',
+    role: 'Advisor',
+    title: 'Astronaut, Israel',
+    bio: 'Israeli astronaut, businessman, philanthropist and former fighter pilot.',
+    photo: '/images/people/eytan-stibbe.jpg',
   },
   {
-    tier: 'Executive Management',
-    copy: 'Chief Executive Officer and Chief Programme Officer, responsible for day-to-day delivery.',
+    name: 'K. Vijayraghavan',
+    role: 'Advisor',
+    title: 'Former Principal Scientific Adviser, Govt. of India',
+    bio: 'Brings national science-policy experience to shape governance and R&D strategy.',
+    photo: '/images/people/k-vijayraghavan.jpg',
   },
   {
-    tier: 'Director · ORBIT',
-    copy: 'Leads the planetary-citizenship curriculum and the international school network.',
+    name: 'Dr. S. Somanath',
+    role: 'Advisor',
+    title: 'Former Chairman, ISRO',
+    bio: 'Veteran rocket scientist who led ISRO through Chandrayaan-3 and Aditya-L1; advises India’s private launch sector.',
+    photo: '/images/people/s-somanath.jpg',
   },
   {
-    tier: 'Director · NEXUS',
-    copy: 'Leads technology literacy, makerspaces and the innovation programmes.',
+    name: 'Ratnesh Mishra',
+    role: 'CEO',
+    title: 'Educationist, Entrepreneur',
+    bio: 'Enterprise leadership bringing partnerships and scale to the space ecosystem, with ground execution.',
+    photo: '/images/people/ratnesh-mishra.jpg',
   },
 ];
 
 export const complianceCards = [
   {
     title: 'Section 8 Company',
-    copy: 'Incorporated under the Companies Act, 2013: India’s highest category of non-profit registration, with full fiduciary governance. CIN: [ ].',
+    copy: 'Incorporated under the Companies Act, 2013: India’s highest category of non-profit registration, with full fiduciary governance.',
   },
   {
     title: 'India-First, Global Vision',
@@ -493,11 +516,11 @@ export const complianceCards = [
   },
   {
     title: 'CSR Eligibility',
-    copy: 'Registered with the Ministry of Corporate Affairs to receive CSR contributions. Eligible activities fall under Schedule VII of the Companies Act, 2013, covering education, skill development and environmental sustainability. CSR-1: [ ].',
+    copy: 'Registered with the Ministry of Corporate Affairs to receive CSR contributions. Eligible activities fall under Schedule VII of the Companies Act, 2013, covering education, skill development and environmental sustainability.',
   },
   {
     title: 'Transparency & Reporting',
-    copy: 'Annual impact reports, audited financials and quarterly partner briefings. Full transparency on how every rupee is deployed. Latest annual report: [link].',
+    copy: 'Annual impact reports, audited financials and quarterly partner briefings. Full transparency on how every rupee is deployed.',
   },
 ];
 

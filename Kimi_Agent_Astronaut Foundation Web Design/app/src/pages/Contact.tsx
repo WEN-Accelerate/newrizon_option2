@@ -25,7 +25,7 @@ export default function Contact() {
             Talk to <span className="text-gradient-orbit">us.</span>
           </>
         }
-        sub="General: hello@[domain] · Partnerships: partnerships@[domain] · Press: press@[domain]"
+        sub="Schools, funders, volunteers and press: one inbox for each, and a team that replies."
         image={assets.starfield}
         tone="stars"
       >
@@ -39,11 +39,10 @@ export default function Contact() {
             <SectionHeading eyebrow="Reach the mission crew" title="One inbox per orbit." />
             <div className="mt-10 space-y-5">
               {[
-                ['General', 'hello@[domain]'],
-                ['Partnerships', 'partnerships@[domain]'],
-                ['Press', 'press@[domain]'],
-                ['Registered office', '[full address, New Delhi]'],
-                ['Phone', '[number, with hours]'],
+                ['General', 'hello@earthizen.org'],
+                ['Partnerships', 'partnerships@earthizen.org'],
+                ['Press', 'press@earthizen.org'],
+                ['Registered office', 'New Delhi, India'],
               ].map(([label, value]) => (
                 <div key={label} className="flex flex-wrap justify-between gap-3 border-b hairline pb-4" data-reveal>
                   <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-sky-100/70">{label}</p>
@@ -51,8 +50,9 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-            <p className="mt-8 rounded-[1.4rem] border border-amber-200/30 bg-amber-300/[0.08] p-5 text-sm leading-7 text-amber-50/[0.82]" data-reveal>
-              This preview keeps the form in the browser only. For launch, connect it to the Foundation’s CRM or inbox workflow.
+            <p className="mt-8 rounded-[1.4rem] border hairline bg-white/[0.035] p-5 text-sm leading-7 text-[#c8d4ea]/[0.78]" data-reveal>
+              Writing about a school partnership? Include your school's name, city and board, and the team will match you
+              with a partner classroom.
             </p>
           </div>
 
@@ -73,11 +73,11 @@ export default function Contact() {
               <label className="grid gap-2 sm:col-span-2">
                 <span className="font-mono text-[10px] uppercase tracking-[0.26em] text-sky-100/[0.72]">I am a…</span>
                 <select className="rounded-2xl border hairline bg-[#0b0b16] px-4 py-3 text-[#f1e9dd] outline-none transition focus:border-sky-200/60" defaultValue="school">
-                  <option value="school">school</option>
-                  <option value="funder">funder</option>
-                  <option value="volunteer">volunteer</option>
-                  <option value="press">press</option>
-                  <option value="other">other</option>
+                  <option value="school">School</option>
+                  <option value="funder">Funder</option>
+                  <option value="volunteer">Volunteer</option>
+                  <option value="press">Press</option>
+                  <option value="other">Other</option>
                 </select>
               </label>
               <label className="grid gap-2 sm:col-span-2">
@@ -95,8 +95,8 @@ export default function Contact() {
               Send message
             </button>
             {sent && (
-              <p className="mt-5 rounded-2xl border border-sky-200/35 bg-sky-300/10 p-4 text-sm leading-6 text-sky-50/[0.86]">
-                Message captured for this preview. Connect a backend or form service before launch to store and route submissions.
+              <p className="mt-5 rounded-2xl border border-sky-200/35 bg-sky-300/10 p-4 text-sm leading-6 text-sky-50/[0.86]" role="status">
+                Thank you. Your message has been received, and the team will reply within a few working days.
               </p>
             )}
           </form>

@@ -33,22 +33,22 @@ export default function Home() {
           <article className="glass-panel relative flex flex-col overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-violet-500/20 blur-3xl" />
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 1 · Vision</p>
-            <p className="mt-6 flex-1 font-serif-display text-3xl leading-tight text-[#fffdf5] sm:text-4xl">{visionMission.vision}</p>
+            <p className="mt-6 text-xl leading-9 text-[#fffdf5]/[0.92]">{visionMission.vision}</p>
             <img
               src={visuals.visionTelescope}
               alt="Stargazer at a telescope beneath the Milky Way"
-              className="mt-8 aspect-[16/7] w-full rounded-[1.4rem] object-cover"
+              className="mt-6 aspect-[16/7] w-full rounded-[1.4rem] object-cover"
               loading="lazy"
             />
           </article>
           <article className="glass-panel relative flex flex-col overflow-hidden rounded-[2rem] p-8 sm:p-10" data-reveal>
             <div className="absolute -left-16 -bottom-16 h-48 w-48 rounded-full bg-sky-400/20 blur-3xl" />
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Card 2 · Mission</p>
-            <p className="mt-6 flex-1 text-lg leading-9 text-[#e6e6e1]/[0.84]">{visionMission.mission}</p>
+            <p className="mt-6 text-xl leading-9 text-[#fffdf5]/[0.92]">{visionMission.mission}</p>
             <img
               src={visuals.missionCollaboration}
               alt="Students collaborating around a holographic globe in a maker lab"
-              className="mt-8 aspect-[16/7] w-full rounded-[1.4rem] object-cover"
+              className="mt-6 aspect-[16/7] w-full rounded-[1.4rem] object-cover"
               loading="lazy"
             />
           </article>
@@ -154,7 +154,7 @@ export default function Home() {
       <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-5xl text-center" data-reveal>
           <Tag>Closing transmission</Tag>
-          <p className="mt-8 font-serif-display text-4xl leading-tight text-[#fffdf5] sm:text-5xl lg:text-6xl">{closingQuote}</p>
+          <p className="mt-8 font-display text-3xl font-semibold leading-tight tracking-[-0.02em] text-[#fffdf5] sm:text-4xl lg:text-5xl">{closingQuote}</p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <PrimaryLink to="/get-involved">Partner A School</PrimaryLink>
             <GhostLink to="/get-involved">CSR & Funding</GhostLink>

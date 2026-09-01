@@ -1,4 +1,4 @@
-import { assets, complianceCards, founderQuote, leadershipTiers, photos, visionMission, visuals } from '@/data/content';
+import { assets, boardMembers, complianceCards, founderQuote, photos, visionMission } from '@/data/content';
 import { GhostLink, ImageSlotCard, PageHero, PrimaryLink, SectionHeading, Tag } from '@/components/Bits';
 import { PageEndBand } from '@/components/Layout';
 import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
@@ -56,16 +56,22 @@ export default function About() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeading eyebrow="How it started" title="The origin story" />
-            <div className="mt-8 rounded-[2rem] border border-amber-200/30 bg-amber-300/[0.08] p-7" data-reveal>
+            <div className="mt-8 rounded-[2rem] border hairline bg-white/[0.035] p-7" data-reveal>
               <p className="text-lg leading-9 text-[#e6e6e1]/[0.82]">
-                [Approximately 200 words, first person if possible. Required from the Foundation: who started Earthizen, what they saw that made them start it, what the first classroom was, and what happened in it.]
+                It began with a view. On his mission to the International Space Station, Group Captain Shubhanshu Shukla
+                looked down at Earth and saw what every astronaut before him has seen: one planet, whole and borderless.
+                He came home convinced that the perspective itself could be taught, and that the place to teach it was the
+                classroom. The first sessions were simple: a school hall, a projector, and children asking whether the lines
+                on their maps were visible from space. They are not. From that answer grew the Earthizen Foundation, and a
+                curriculum that connects classrooms to communities, technology to purpose, and every child to the one home
+                we share.
               </p>
             </div>
           </div>
           <ImageSlotCard
             slot={{
               id: 'IMG-A-03',
-              spec: 'The first classroom, or the founding moment the story describes. Documentary, unpolished, dated.',
+              spec: 'The first classroom, or the founding moment the story describes.',
               alt: 'Group Captain Shubhanshu Shukla with young students in their classroom',
               status: 'AVAILABLE',
               src: photos.classroomChildren,
@@ -81,11 +87,11 @@ export default function About() {
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <article className="rounded-[2rem] border hairline bg-white/[0.035] p-8" data-reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Vision</p>
-            <p className="mt-6 font-serif-display text-3xl leading-tight text-[#fffdf5]">{visionMission.vision}</p>
+            <p className="mt-6 text-xl leading-9 text-[#fffdf5]/[0.92]">{visionMission.vision}</p>
           </article>
           <article className="rounded-[2rem] border hairline bg-white/[0.035] p-8" data-reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-sky-200/[0.76]">Mission</p>
-            <p className="mt-6 text-lg leading-9 text-[#e6e6e1]/[0.82]">{visionMission.mission}</p>
+            <p className="mt-6 text-xl leading-9 text-[#fffdf5]/[0.92]">{visionMission.mission}</p>
           </article>
         </div>
       </section>
@@ -93,34 +99,27 @@ export default function About() {
       <section className="mx-auto max-w-[1500px] px-5 py-28 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="The people behind"
-          title="The team and Leadership"
-          sub="Five portrait slots are intentionally held until real names, roles and photographs are cleared."
+          title="Leadership & Advisory Board"
+          sub="Astronauts, scientists and leaders guiding the foundation's mission, governance and global reach."
         />
-        <div className="mt-12">
-          <ImageSlotCard
-            slot={{
-              id: 'IMG-A-09',
-              spec: 'Illustrative visual supplied by the foundation; real board photography to follow.',
-              alt: 'Illustration: the Earthizen leadership table with a holographic Earth at its centre',
-              status: 'AVAILABLE',
-              src: visuals.aboutBoard,
-            }}
-            ratio="aspect-[21/9]"
-            className="rounded-[2rem]"
-          />
-        </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-          {leadershipTiers.map((leader, index) => (
-            <article key={leader.tier} className="rounded-[1.6rem] border hairline bg-white/[0.035] p-5" data-reveal>
-              <div className="image-slot grid aspect-square place-items-center rounded-[1.2rem] p-4 text-center">
-                <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-sky-100/[0.78]">IMG-A-{String(index + 4).padStart(2, '0')}</p>
-                  <p className="mt-3 text-xs leading-6 text-[#c8d4ea]/[0.62]">Portrait of [name], [role], Earthizen Foundation</p>
-                  <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-red-100/[0.78]">BLOCKING</p>
-                </div>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {boardMembers.map((member) => (
+            <article key={member.name} className="flex flex-col overflow-hidden rounded-[1.6rem] border hairline bg-white/[0.035] transition hover:bg-white/[0.06]" data-reveal>
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={member.photo}
+                  alt={`${member.name}, ${member.title}`}
+                  className="h-full w-full object-cover transition duration-700 hover:scale-105"
+                  loading="lazy"
+                />
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold text-[#fffdf5]">{leader.tier}</h3>
-              <p className="mt-3 text-sm leading-7 text-[#c8d4ea]/70">{leader.copy}</p>
+              <div className="flex flex-1 flex-col p-5">
+                <h3 className="font-display text-lg font-semibold leading-snug text-[#fffdf5]">{member.name}</h3>
+                <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-sky-100/[0.78]">
+                  {member.role} · {member.title}
+                </p>
+                <p className="mt-3 flex-1 text-sm leading-6 text-[#c8d4ea]/70">{member.bio}</p>
+              </div>
             </article>
           ))}
         </div>

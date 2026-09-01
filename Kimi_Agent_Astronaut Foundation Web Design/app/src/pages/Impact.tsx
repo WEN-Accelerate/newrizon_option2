@@ -68,9 +68,8 @@ export default function Impact() {
                   {story.headline}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[#c8d4ea]/[0.72]">{story.body}</p>
-                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t hairline pt-5">
+                <div className="mt-6 border-t hairline pt-5">
                   <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-sky-100/[0.68]">{story.credit}</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-100/70">Evidence: [required]</p>
                 </div>
                 <p className="sr-only">Story {index + 1}</p>
               </div>

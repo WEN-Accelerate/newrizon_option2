@@ -73,7 +73,7 @@ export function PageHero({
   showCraft?: boolean;
 }) {
   return (
-    <section className="hero-vignette relative flex min-h-[92vh] items-end overflow-hidden pt-32">
+    <section className="hero-vignette relative min-h-[88svh] overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={image}
@@ -92,7 +92,9 @@ export function PageHero({
           data-parallax={-0.08}
         />
       )}
-      <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-20 sm:px-8 lg:px-10">
+      {/* Fixed top offset so the hero text starts at the same distance from the
+          header on every page (design note 5). */}
+      <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-20 pt-48 sm:px-8 sm:pt-52 lg:px-10">
         <p data-page-intro className="font-mono text-[11px] uppercase tracking-[0.42em] text-sky-200/[0.82]">
           {eyebrow}
         </p>
@@ -109,33 +111,13 @@ export function PageHero({
 }
 
 export function ImageSlotCard({ slot, ratio = 'aspect-[16/10]', className = '' }: { slot: ImageSlot; ratio?: string; className?: string }) {
-  const statusTone =
-    slot.status === 'BLOCKING'
-      ? 'text-red-200 border-red-200/40 bg-red-400/10'
-      : slot.status === 'PERMISSION REQUIRED'
-        ? 'text-amber-100 border-amber-200/40 bg-amber-300/10'
-        : 'text-sky-100 border-sky-200/35 bg-sky-300/10';
-
   return (
-    <figure className={`image-slot group relative ${ratio} overflow-hidden rounded-[1.6rem] ${className}`} data-reveal>
-      {slot.src ? (
-        <img src={slot.src} alt={slot.alt} className="h-full w-full object-cover opacity-78 transition duration-700 group-hover:scale-105 group-hover:opacity-95" />
-      ) : (
-        <div className="absolute inset-0 grid place-items-center p-6 text-center">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.32em] text-sky-100/80">{slot.id}</p>
-            <p className="mt-4 max-w-sm text-sm leading-7 text-[#c8d4ea]/[0.72]">{slot.spec}</p>
-          </div>
-        </div>
+    <figure className={`group relative ${ratio} overflow-hidden rounded-[1.6rem] border hairline bg-[#0b0b16] ${className}`} data-reveal>
+      {slot.src && (
+        <img src={slot.src} alt={slot.alt} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
       )}
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#05060f]/95 via-[#05060f]/[0.58] to-transparent p-4">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="rounded-full border border-[#f1e9dd]/[0.24] bg-[#05060f]/[0.72] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-[#f1e9dd]">
-            {slot.id}
-          </span>
-          <span className={`rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] ${statusTone}`}>{slot.status}</span>
-        </div>
-        <figcaption className="mt-2 line-clamp-2 text-xs leading-5 text-[#e6e6e1]/[0.74]">{slot.alt}</figcaption>
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#05060f]/[0.92] via-[#05060f]/[0.45] to-transparent p-4 pt-10">
+        <figcaption className="line-clamp-2 text-xs leading-5 text-[#e6e6e1]/[0.8]">{slot.alt}</figcaption>
       </div>
     </figure>
   );
@@ -175,7 +157,7 @@ export function CounterStat({ value, suffix, label, copy }: { value: number; suf
   const ref = useCountUp(value);
   return (
     <div className="glass-panel scanline rounded-[1.6rem] p-6" data-reveal>
-      <p className="font-display text-5xl font-semibold tracking-[-0.05em] text-[#fffdf5] sm:text-6xl">
+      <p className="font-display text-4xl font-semibold tracking-[-0.03em] text-[#fffdf5] sm:text-5xl">
         <span ref={ref}>{value.toLocaleString('en-IN')}</span>
         <span className="text-gradient-orbit">{suffix}</span>
       </p>

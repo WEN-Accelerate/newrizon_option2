@@ -70,3 +70,12 @@ IMG-I-02/03/05, status AVAILABLE), `vision-telescope` and
 Unused from the pack (available in the zip if needed later): value_* cards,
 portrait-orientation heroes, earth_cities_*, space_iss, space_sunflare,
 rocket_space, astronaut_floating, new_impact.
+
+## Update: production release
+
+- `public/images/people/`: portraits for the Leadership & Advisory Board
+  (Shubhanshu Shukla, Eytan Stibbe, K. Vijayraghavan, Dr. S. Somanath,
+  Ratnesh Mishra), cropped 4:5 from the supplied deck.
+- All CMS slot chrome (IDs, status chips, spec placeholders) removed from the
+  rendered site; statuses remain in the data layer only.
+- All bracketed placeholder copy replaced with production copy.

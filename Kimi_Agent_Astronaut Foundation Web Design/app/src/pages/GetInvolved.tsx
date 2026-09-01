@@ -6,21 +6,21 @@ import { usePageIntro, useParallax, useReveal } from '@/hooks/useMotion';
 const partnershipTiers = [
   {
     name: 'One Classroom Orbit',
-    cost: '[cost]',
+    cost: 'On request',
     schools: '1 school',
     scope: 'Earthizen Curriculum, teacher onboarding, one partner-classroom match.',
     reporting: 'Term review + annual impact note',
   },
   {
     name: 'City Constellation',
-    cost: '[cost]',
+    cost: 'On request',
     schools: '10 schools',
     scope: 'Curriculum + NEXUS bootcamp + Community Lab in one city cluster.',
     reporting: 'Quarterly briefings + audited annual report',
   },
   {
     name: 'National Mission',
-    cost: '[cost]',
+    cost: 'On request',
     schools: '100 schools',
     scope: 'Multi-city rollout, makerspaces, summit delegation and platform access.',
     reporting: 'Quarterly dashboard + annual audited impact report',
@@ -104,7 +104,7 @@ export default function GetInvolved() {
             <div className="rounded-[2rem] border border-amber-200/30 bg-amber-300/[0.08] p-7" data-reveal>
               <h3 className="font-display text-2xl font-semibold text-[#fffdf5]">Partnership pack</h3>
               <p className="mt-4 text-sm leading-7 text-[#e6e6e1]/[0.78]">
-                Cost per child: [cost]. Downloadable partnership pack: [gated behind name and email]. Book a call with the partnerships team to scope a defensible CSR line.
+                Every partnership is scoped and costed per school cluster, with reporting agreed up front. Book a call with the partnerships team to build a defensible CSR line for your budget.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <PrimaryLink to="/contact" dark>Book a call</PrimaryLink>

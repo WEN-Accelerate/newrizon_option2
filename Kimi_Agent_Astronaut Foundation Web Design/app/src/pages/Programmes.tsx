@@ -63,9 +63,6 @@ export default function Programmes() {
                   </div>
                   <div className={index % 2 ? 'lg:order-1' : ''}>
                     <ImageSlotCard slot={vertical.image} ratio="aspect-[3/2]" className="rounded-[2rem]" />
-                    <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#c8d4ea]/45" data-reveal>
-                      Placeholder schedule slot · approved alt text retained for CMS
-                    </p>
                   </div>
                 </div>
               </section>

@@ -112,7 +112,7 @@ export function PageEndBand() {
     <section className="relative z-10 mx-auto max-w-[1500px] px-5 pb-20 sm:px-8 lg:px-10">
       <div className="image-slot scanline relative overflow-hidden rounded-[2rem] px-6 py-12 text-center sm:px-10 lg:px-16" data-reveal>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(134,66,255,0.35),transparent_55%)]" />
-        <p className="relative mx-auto max-w-4xl font-serif-display text-3xl leading-tight text-[#fffdf5] sm:text-4xl lg:text-5xl">
+        <p className="relative mx-auto max-w-4xl font-display text-2xl font-semibold leading-tight tracking-[-0.02em] text-[#fffdf5] sm:text-3xl lg:text-4xl">
           {pageEndCopy}
         </p>
         <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -144,7 +144,7 @@ export function Footer() {
             EARTHIZEN FOUNDATION · Section 8 Company · India-First, Global Vision. From space, there are no borders. Only one beautiful, fragile Earth.
           </p>
           <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.24em] text-[#c8d4ea]/[0.48]">
-            CIN [ ] · CSR-1 [ ] · 12A [ ] · 80G [ ]
+            Section 8 Company · Schedule VII CSR eligible
           </p>
         </div>
         <div>
@@ -171,7 +171,7 @@ export function Footer() {
             </button>
           </form>
           <p className="mt-4 text-xs leading-6 text-[#c8d4ea]/55">
-            Contact: [Registered address, New Delhi] · hello@[domain] · partnerships@[domain] · [phone]
+            New Delhi, India · hello@earthizen.org · partnerships@earthizen.org
           </p>
         </div>
       </div>
